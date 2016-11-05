@@ -1,0 +1,6 @@
+#---------------------------------------------------------------------------------------------------
+# 70.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+set.dir(output=./outFiles)
+rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
+summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=2441)

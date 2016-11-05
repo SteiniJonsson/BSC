@@ -1,0 +1,4 @@
+set.dir(output=./outFiles)
+make.contigs(file=BSC16s.file,processors=10)
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta,processors=10)
+screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta, group=./outFiles/BSC16s.contigs.groups, maxambig=0, maxlength=300,processors=10)

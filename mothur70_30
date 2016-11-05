@@ -1,0 +1,6 @@
+#---------------------------------------------------------------------------------------------------
+# 70.30 Population-level analysis
+#---------------------------------------------------------------------------------------------------
+set.dir(output=./outFiles)
+metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)
+classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)

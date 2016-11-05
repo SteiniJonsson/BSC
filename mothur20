@@ -1,0 +1,22 @@
+#---------------------------------------------------------------------------------------------------
+# 20. Processing improved sequences
+#---------------------------------------------------------------------------------------------------
+set.dir(output=./outFiles)
+unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)
+count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)
+summary.seqs(count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)
+
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)
+
+summary.seqs(fasta=current, count=current,processors=10)
+
+filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)
+unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)
+pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)
+remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
+summary.seqs(fasta=current, count=current,processors=10)
+classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
+remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)

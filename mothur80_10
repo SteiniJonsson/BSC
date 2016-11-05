@@ -1,0 +1,5 @@
+#---------------------------------------------------------------------------------------------------
+# 80.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+set.dir(output=./outFiles)
+phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)

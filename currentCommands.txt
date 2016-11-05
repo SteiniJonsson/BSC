@@ -19,17 +19,114 @@ align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=sil
 summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
 screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)
 
-summary.seqs(fasta=current, count=current,processors=10)
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, count=./outFiles/BSC16s.trim.contigs.good.good.count_table,processors=10)
 
 filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)
 unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)
 pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
 chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)
 remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
-summary.seqs(fasta=current, count=current,processors=10)
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table,processors=10)
 classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
 remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
 
 #---------------------------------------------------------------------------------------------------
 # 30. Assessing error rates
+#     Skip this section according to Saemundur.
 #---------------------------------------------------------------------------------------------------
+#get.groups(count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, groups=Mock)
+#seq.error(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./HMP_MOCK.v35.fasta, aligned=F,processors=10)
+#dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, cutoff=0.20,processors=10)
+#cluster(column=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.dist, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table)
+#make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+#rarefaction.single(shared=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 40. Preparing for analysis
+#     Since the mock group is used here as well, we will skip it.
+#---------------------------------------------------------------------------------------------------
+#remove.groups(count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, groups=Mock)
+
+#---------------------------------------------------------------------------------------------------
+# 50. OTUs
+#---------------------------------------------------------------------------------------------------
+dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, cutoff=0.20,processors=10)
+cluster(column=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.dist, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table)
+#eða (í staðin fyrir þessar 2 skipanir hér að ofan, fer eftir stærð á dataset,processors=10)
+#cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
+
+make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
+
+#---------------------------------------------------------------------------------------------------
+# 50.10 Phylotypes
+#---------------------------------------------------------------------------------------------------
+phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)
+make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)
+classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)
+
+#---------------------------------------------------------------------------------------------------
+# 50.20 Phylogenetic
+#---------------------------------------------------------------------------------------------------
+dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, output=lt, processors=10,processors=10)
+clearcut(phylip=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.dist)
+
+#---------------------------------------------------------------------------------------------------
+# 60. Analysis
+#---------------------------------------------------------------------------------------------------
+system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)
+system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)
+
+count.groups(shared=./outFiles/BSC16s.an.shared)
+sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)
+
+#---------------------------------------------------------------------------------------------------
+# 70. OTU-based analysis
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------
+# 70.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
+summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=2441)
+
+#---------------------------------------------------------------------------------------------------
+# 70.20 Beta diversity measurements
+#---------------------------------------------------------------------------------------------------
+heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
+heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
+venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=F3D0-F3D1-F3D2-F3D3)
+tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
+parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design,  groups=all,processors=10)
+pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)
+amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)
+homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)
+corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
+corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)
+get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 70.30 Population-level analysis
+#---------------------------------------------------------------------------------------------------
+metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)
+classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)
+
+#---------------------------------------------------------------------------------------------------
+# 80. Phylogeny-based analysis
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------
+# 80.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 80.20 Beta diversity
+#---------------------------------------------------------------------------------------------------
+unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+
