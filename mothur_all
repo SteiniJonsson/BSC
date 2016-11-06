@@ -1,11 +1,11 @@
-mothur10
-mothur20
-mothur50
-mothur50_10
-mothur50_20
-mothur60
-mothur70_10
-mothur70_20
-mothur70_30
-mothur80_10
-mothur80_20
+mothur ./mothur10
+mothur ./mothur20
+mothur ./mothur50
+mothur ./mothur50_10
+mothur ./mothur50_20
+mothur ./mothur60
+mothur ./mothur70_10
+mothur ./mothur70_20
+mothur ./mothur70_30
+mothur ./mothur80_10
+mothur ./mothur80_20
