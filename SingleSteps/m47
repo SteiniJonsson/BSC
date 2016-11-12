@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)

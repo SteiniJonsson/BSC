@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+make.contigs(file=BSC16s.file,processors=10)

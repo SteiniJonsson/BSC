@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)

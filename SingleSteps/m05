@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)

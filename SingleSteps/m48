@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)

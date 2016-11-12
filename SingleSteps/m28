@@ -1,0 +1,2 @@
+set.dir(output=./outFiles)
+count.groups(shared=./outFiles/BSC16s.an.shared)
