@@ -26,11 +26,11 @@ mothur m23
 echo "Start m24 at $(date)" >> oplog
 mothur m24
 
-echo "Start m25 at $(date)" >> oplog
-mothur m25
+#echo "Start m25 at $(date)" >> oplog
+#mothur m25
 
-echo "Start m26 at $(date)" >> oplog
-mothur m26
+#echo "Start m26 at $(date)" >> oplog
+#mothur m26
 
 echo "Start m27 at $(date)" >> oplog
 mothur m27
