@@ -1,10 +1,3 @@
-#===================================================================================================
-#
-#  TODO
-#    venn: set groups    
-#
-#===================================================================================================
-
 #---------------------------------------------------------------------------------------------------
 # 10. Reducing sequencing and PCR errors
 #---------------------------------------------------------------------------------------------------
@@ -107,7 +100,7 @@ heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numot
 dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
 heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
 heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
-venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=B8_01-B8_02-B8_03-B8_04-B8_05-B8_06-B8_07-B8_08-B8_09-B8_10)
+venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=F3D0-F3D1-F3D2-F3D3)
 tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
 parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design,  groups=all,processors=10)
 pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
@@ -138,6 +131,6 @@ phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.uniq
 # 80.20 Beta diversity
 #    Here we need more info on how to make the tree and mouse.time.design
 #---------------------------------------------------------------------------------------------------
-#unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, random=F, subsample=2241,processors=10)
-#unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, random=F, subsample=2241,processors=10)
+#unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+#unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
 

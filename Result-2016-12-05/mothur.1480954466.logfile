@@ -1,0 +1,2018 @@
+Linux version
+
+Using ReadLine
+
+Running 64Bit Version
+
+mothur v.1.38.1
+Last updated: 8/9/2016
+
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+University of Michigan
+pschloss@umich.edu
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+Type 'quit()' to exit program
+Batch Mode
+
+
+mothur > set.dir(output=./outFiles)
+Mothur's directories:
+outputDir=/data/data02/asta/testrun/outFiles/
+
+mothur > cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
+
+Using 10 processors.
+Splitting the file...
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+
+It took 38 seconds to calculate the distances for 5596 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+
+It took 14 seconds to calculate the distances for 3867 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+
+It took 99 seconds to calculate the distances for 12632 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+
+It took 374 seconds to calculate the distances for 27975 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+
+It took 1 seconds to calculate the distances for 1457 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+
+It took 25 seconds to calculate the distances for 4993 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+
+It took 1 seconds to calculate the distances for 814 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+
+It took 0 seconds to calculate the distances for 717 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+
+It took 4 seconds to calculate the distances for 1745 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+
+It took 0 seconds to calculate the distances for 934 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+
+It took 24 seconds to calculate the distances for 4737 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+
+It took 50 seconds to calculate the distances for 7061 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+
+It took 2 seconds to calculate the distances for 1480 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+
+It took 18 seconds to calculate the distances for 4218 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+
+It took 2 seconds to calculate the distances for 1442 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+
+It took 2 seconds to calculate the distances for 2043 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+
+It took 1 seconds to calculate the distances for 453 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+
+It took 10 seconds to calculate the distances for 3416 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+
+It took 0 seconds to calculate the distances for 391 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+
+It took 8 seconds to calculate the distances for 2771 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+
+It took 0 seconds to calculate the distances for 29 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+
+It took 1 seconds to calculate the distances for 1408 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+
+It took 6 seconds to calculate the distances for 2357 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+
+It took 0 seconds to calculate the distances for 92 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+
+It took 16 seconds to calculate the distances for 4348 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+
+It took 5 seconds to calculate the distances for 2209 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+
+It took 2 seconds to calculate the distances for 1491 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+
+It took 1 seconds to calculate the distances for 873 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+
+It took 2 seconds to calculate the distances for 1234 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+
+It took 1 seconds to calculate the distances for 1146 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+
+It took 2 seconds to calculate the distances for 1224 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+
+It took 1 seconds to calculate the distances for 950 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+
+It took 0 seconds to calculate the distances for 699 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+
+It took 3 seconds to calculate the distances for 1898 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+
+It took 2 seconds to calculate the distances for 1364 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+
+It took 1 seconds to calculate the distances for 924 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+
+It took 0 seconds to calculate the distances for 286 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+
+It took 1 seconds to calculate the distances for 553 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+
+It took 4 seconds to calculate the distances for 2801 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+
+It took 1 seconds to calculate the distances for 632 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+
+It took 0 seconds to calculate the distances for 433 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+
+It took 0 seconds to calculate the distances for 397 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+
+It took 1 seconds to calculate the distances for 932 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+
+It took 1 seconds to calculate the distances for 564 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+
+It took 0 seconds to calculate the distances for 115 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+
+It took 0 seconds to calculate the distances for 30 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+
+It took 0 seconds to calculate the distances for 15 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+
+It took 0 seconds to calculate the distances for 109 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+
+It took 2 seconds to calculate the distances for 1508 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+
+It took 0 seconds to calculate the distances for 28 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+
+It took 0 seconds to calculate the distances for 374 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+
+It took 1 seconds to calculate the distances for 352 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+
+It took 0 seconds to calculate the distances for 150 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+
+It took 0 seconds to calculate the distances for 491 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+
+It took 0 seconds to calculate the distances for 107 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+
+It took 0 seconds to calculate the distances for 246 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+
+It took 0 seconds to calculate the distances for 145 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+
+It took 0 seconds to calculate the distances for 530 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+
+It took 0 seconds to calculate the distances for 238 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+
+It took 0 seconds to calculate the distances for 14 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+
+It took 1 seconds to calculate the distances for 393 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+
+It took 0 seconds to calculate the distances for 596 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+
+It took 0 seconds to calculate the distances for 106 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+
+It took 0 seconds to calculate the distances for 144 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+
+It took 0 seconds to calculate the distances for 169 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+
+It took 0 seconds to calculate the distances for 248 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+
+It took 0 seconds to calculate the distances for 16 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+
+It took 0 seconds to calculate the distances for 91 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+
+It took 0 seconds to calculate the distances for 58 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+
+It took 0 seconds to calculate the distances for 89 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+
+It took 0 seconds to calculate the distances for 17 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+
+It took 0 seconds to calculate the distances for 93 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+
+It took 0 seconds to calculate the distances for 44 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+
+It took 1 seconds to calculate the distances for 13 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.dist
+
+It took 0 seconds to calculate the distances for 25 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+
+It took 0 seconds to calculate the distances for 18 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+
+It took 0 seconds to calculate the distances for 157 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+
+It took 0 seconds to calculate the distances for 28 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+
+It took 0 seconds to calculate the distances for 100 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.dist
+
+It took 0 seconds to calculate the distances for 17 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+
+It took 0 seconds to calculate the distances for 32 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+
+It took 0 seconds to calculate the distances for 7 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+
+It took 0 seconds to calculate the distances for 7 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+
+It took 0 seconds to calculate the distances for 53 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+
+It took 0 seconds to calculate the distances for 16 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+
+It took 0 seconds to calculate the distances for 7 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.dist
+
+It took 0 seconds to calculate the distances for 11 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+
+It took 0 seconds to calculate the distances for 13 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.dist
+
+It took 0 seconds to calculate the distances for 20 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+
+It took 0 seconds to calculate the distances for 22 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.dist
+
+It took 0 seconds to calculate the distances for 7 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+
+It took 0 seconds to calculate the distances for 9 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.temp, processors=10, cutoff=0.15, outputdir=/data/data02/asta/testrun/outFiles/)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+It took 750 seconds to split the distance file.
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.dist
+***********************************************************************
+
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+Cutoff was 0.15 changed cutoff to 0.14
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+Cutoff was 0.15 changed cutoff to 0.13
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+Cutoff was 0.15 changed cutoff to 0.15
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.dist
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+Cutoff was 0.15 changed cutoff to 0.08
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+Cutoff was 0.15 changed cutoff to 0.14
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+Cutoff was 0.15 changed cutoff to 0.13
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+
+Reading /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+Cutoff was 0.15 changed cutoff to 0.07
+Cutoff was 0.15 changed cutoff to 0.07
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.05
+Cutoff was 0.15 changed cutoff to 0.05
+
+Cutoff was 0.15 changed cutoff to 0.05
+It took 790 seconds to cluster
+Merging the clustered files...
+It took 21 seconds to merge.
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+
+
+mothur > quit()

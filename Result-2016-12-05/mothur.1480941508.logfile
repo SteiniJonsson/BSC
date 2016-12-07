@@ -1,0 +1,668 @@
+Linux version
+
+Using ReadLine
+
+Running 64Bit Version
+
+mothur v.1.38.1
+Last updated: 8/9/2016
+
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+University of Michigan
+pschloss@umich.edu
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+Type 'quit()' to exit program
+Batch Mode
+
+
+mothur > set.dir(output=./outFiles)
+Mothur's directories:
+outputDir=/data/data02/asta/testrun/outFiles/
+
+mothur > unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)
+1347261	1140370
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.names
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.fasta
+
+
+mothur > count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)
+
+Using 10 processors.
+It took 10 secs to create a table for 1347261 sequences.
+
+
+Total number of sequences: 1347261
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.count_table
+
+
+mothur > summary.seqs(count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+Using /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	250	250	0	3	1
+2.5%-tile:	1	292	292	0	4	33682
+25%-tile:	1	294	294	0	4	336816
+Median: 	1	295	295	0	5	673631
+75%-tile:	1	296	296	0	5	1010446
+97.5%-tile:	1	298	298	0	7	1313580
+Maximum:	1	300	300	0	41	1347261
+Mean:	1	294.665	294.665	0	4.76457
+# of unique seqs:	1140370
+total # of seqs:	1347261
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.summary
+
+It took 13 secs to summarize 1347261 sequences.
+
+mothur > align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)
+
+Using 10 processors.
+
+Reading in the silva.v5.fasta template sequences...	DONE.
+It took 224 to read  135907 sequences.
+Aligning sequences from ./outFiles/BSC16s.trim.contigs.good.unique.fasta ...
+[WARNING]: Some of your sequences generated alignments that eliminated too many bases, a list is provided in /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.flip.accnos. If you set the flip parameter to true mothur will try aligning the reverse compliment as well.
+It took 2296 secs to align 1140370 sequences.
+
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.align
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.align.report
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.flip.accnos
+
+
+mothur > summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	0	0	0	0	1	1
+2.5%-tile:	13862	23444	253	0	4	33682
+25%-tile:	13862	23444	253	0	4	336816
+Median: 	13862	23444	253	0	5	673631
+75%-tile:	13862	23444	253	0	5	1010446
+97.5%-tile:	13862	23444	254	0	7	1313580
+Maximum:	26105	26105	296	0	25	1347261
+Mean:	13898.7	23403.8	251.142	0	4.73304
+# of unique seqs:	1140370
+total # of seqs:	1347261
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.summary
+
+It took 282 secs to summarize 1347261 sequences.
+
+mothur > screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)
+
+Using 10 processors.
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.summary
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.align
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.bad.accnos
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.good.count_table
+
+
+It took 804 secs to screen 1140370 sequences.
+
+mothur > summary.seqs(fasta=current, count=current,processors=10)
+Using /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.good.count_table as input file for the count parameter.
+Using /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.align as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	13836	23444	239	0	3	1
+2.5%-tile:	13862	23444	253	0	4	33307
+25%-tile:	13862	23444	253	0	4	333063
+Median: 	13862	23444	253	0	5	666126
+75%-tile:	13862	23444	253	0	5	999188
+97.5%-tile:	13862	23444	254	0	7	1298944
+Maximum:	13862	25359	276	0	8	1332250
+Mean:	13861.9	23444	253.148	0	4.75286
+# of unique seqs:	1126753
+total # of seqs:	1332250
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.summary
+
+It took 241 secs to summarize 1332250 sequences.
+
+mothur > filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)
+
+Using 10 processors.
+Creating Filter... 
+
+
+Running Filter... 
+
+
+
+Length of filtered alignment: 577
+Number of columns removed: 49423
+Length of the original alignment: 50000
+Number of sequences used to construct filter: 1126753
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.filter
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta
+
+
+mothur > unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)
+1126753	457329
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta
+
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group B8_04:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group B8_07:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group B8_10:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group G_03:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group G_06:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group G_09:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group H8_02:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group H8_05:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group B8_01:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group H8_08:
+16742	4945	11797
+Total number of sequences before pre.cluster was 16742.
+pre.cluster removed 11797 sequences.
+
+It took 19 secs to cluster 16742 sequences.
+
+Processing group G_01:
+18080	6872	11208
+Total number of sequences before pre.cluster was 18080.
+pre.cluster removed 11208 sequences.
+
+It took 30 secs to cluster 18080 sequences.
+
+Processing group G_10:
+20227	7435	12792
+Total number of sequences before pre.cluster was 20227.
+pre.cluster removed 12792 sequences.
+
+It took 37 secs to cluster 20227 sequences.
+
+Processing group G_04:
+19470	7502	11968
+Total number of sequences before pre.cluster was 19470.
+pre.cluster removed 11968 sequences.
+
+It took 42 secs to cluster 19470 sequences.
+
+Processing group H8_06:
+17289	8221	9068
+Total number of sequences before pre.cluster was 17289.
+pre.cluster removed 9068 sequences.
+
+It took 43 secs to cluster 17289 sequences.
+
+Processing group H8_03:
+20311	9710	10601
+Total number of sequences before pre.cluster was 20311.
+pre.cluster removed 10601 sequences.
+
+It took 49 secs to cluster 20311 sequences.
+
+Processing group H8_09:
+18073	7569	10504
+Total number of sequences before pre.cluster was 18073.
+pre.cluster removed 10504 sequences.
+
+It took 35 secs to cluster 18073 sequences.
+
+Processing group G_02:
+21753	9365	12388
+Total number of sequences before pre.cluster was 21753.
+pre.cluster removed 12388 sequences.
+
+It took 65 secs to cluster 21753 sequences.
+
+Processing group G_07:
+24277	11598	12679
+Total number of sequences before pre.cluster was 24277.
+pre.cluster removed 12679 sequences.
+
+It took 71 secs to cluster 24277 sequences.
+
+Processing group B8_02:
+22410	8091	14319
+Total number of sequences before pre.cluster was 22410.
+pre.cluster removed 14319 sequences.
+
+It took 39 secs to cluster 22410 sequences.
+
+Processing group G_05:
+21138	9257	11881
+Total number of sequences before pre.cluster was 21138.
+pre.cluster removed 11881 sequences.
+
+It took 47 secs to cluster 21138 sequences.
+
+Processing group H8_01:
+24885	11577	13308
+Total number of sequences before pre.cluster was 24885.
+pre.cluster removed 13308 sequences.
+
+It took 80 secs to cluster 24885 sequences.
+
+Processing group B8_08:
+18835	7034	11801
+Total number of sequences before pre.cluster was 18835.
+pre.cluster removed 11801 sequences.
+
+It took 37 secs to cluster 18835 sequences.
+16919	6014	10905
+Total number of sequences before pre.cluster was 16919.
+pre.cluster removed 10905 sequences.
+
+It took 31 secs to cluster 16919 sequences.
+
+Processing group G_08:
+26106	12953	13153
+Total number of sequences before pre.cluster was 26106.
+pre.cluster removed 13153 sequences.
+
+It took 98 secs to cluster 26106 sequences.
+
+Processing group B8_05:
+23562	9757	13805
+Total number of sequences before pre.cluster was 23562.
+pre.cluster removed 13805 sequences.
+
+It took 55 secs to cluster 23562 sequences.
+
+Processing group H8_10:
+22555	8575	13980
+Total number of sequences before pre.cluster was 22555.
+pre.cluster removed 13980 sequences.
+
+It took 47 secs to cluster 22555 sequences.
+19839	7390	12449
+Total number of sequences before pre.cluster was 19839.
+pre.cluster removed 12449 sequences.
+
+It took 32 secs to cluster 19839 sequences.
+26679	13031	13648
+Total number of sequences before pre.cluster was 26679.
+pre.cluster removed 13648 sequences.
+
+It took 92 secs to cluster 26679 sequences.
+
+Processing group H8_07:
+22654	9942	12712
+Total number of sequences before pre.cluster was 22654.
+pre.cluster removed 12712 sequences.
+
+It took 56 secs to cluster 22654 sequences.
+
+Processing group B8_09:
+23368	10986	12382
+Total number of sequences before pre.cluster was 23368.
+pre.cluster removed 12382 sequences.
+
+It took 67 secs to cluster 23368 sequences.
+
+Processing group B8_03:
+24292	9379	14913
+Total number of sequences before pre.cluster was 24292.
+pre.cluster removed 14913 sequences.
+
+It took 47 secs to cluster 24292 sequences.
+
+Processing group B8_06:
+25353	14337	11016
+Total number of sequences before pre.cluster was 25353.
+pre.cluster removed 11016 sequences.
+
+It took 112 secs to cluster 25353 sequences.
+
+Processing group H8_04:
+26843	12490	14353
+Total number of sequences before pre.cluster was 26843.
+pre.cluster removed 14353 sequences.
+
+It took 79 secs to cluster 26843 sequences.
+16824	7566	9258
+Total number of sequences before pre.cluster was 16824.
+pre.cluster removed 9258 sequences.
+
+It took 27 secs to cluster 16824 sequences.
+18961	7835	11126
+Total number of sequences before pre.cluster was 18961.
+pre.cluster removed 11126 sequences.
+
+It took 30 secs to cluster 18961 sequences.
+22617	8411	14206
+Total number of sequences before pre.cluster was 22617.
+pre.cluster removed 14206 sequences.
+
+It took 39 secs to cluster 22617 sequences.
+Total number of sequences before pre.cluster was 24400.
+pre.cluster removed 11464 sequences.
+
+It took 78 secs to cluster 24400 sequences.
+21164	7696	13468
+Total number of sequences before pre.cluster was 21164.
+pre.cluster removed 13468 sequences.
+
+It took 30 secs to cluster 21164 sequences.
+26341	13166	13175
+Total number of sequences before pre.cluster was 26341.
+pre.cluster removed 13175 sequences.
+
+It took 66 secs to cluster 26341 sequences.
+It took 259 secs to run pre.cluster.
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_01.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_02.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_03.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_04.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_05.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_06.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_07.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_08.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_09.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8_10.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_01.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_02.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_03.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_04.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_05.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_06.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_07.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_08.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_09.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G_10.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_01.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_02.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_03.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_04.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_05.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_06.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_07.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_08.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_09.map
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8_10.map
+
+
+mothur > chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)
+
+Using 10 processors.
+
+uchime by Robert C. Edgar
+http://drive5.com/uchime
+This code is donated to the public domain.
+
+Checking sequences from ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta ...
+
+It took 595 secs to check 4945 sequences from group B8_10.
+
+It took 1152 secs to check 6872 sequences from group G_09.
+
+It took 1224 secs to check 7502 sequences from group H8_05.
+
+It took 1233 secs to check 7435 sequences from group G_03.
+
+It took 1361 secs to check 8221 sequences from group H8_02.
+
+It took 1723 secs to check 9710 sequences from group H8_08.
+
+It took 1823 secs to check 9365 sequences from group G_06.
+
+It took 1279 secs to check 7569 sequences from group G_01.
+
+It took 2514 secs to check 11577 sequences from group B8_07.
+
+It took 2619 secs to check 11598 sequences from group B8_01.
+
+It took 841 secs to check 6014 sequences from group G_07.
+
+It took 1623 secs to check 8091 sequences from group G_04.
+
+It took 1736 secs to check 9257 sequences from group G_10.
+
+It took 1084 secs to check 7034 sequences from group G_02.
+
+It took 3067 secs to check 12953 sequences from group B8_04.
+
+It took 1955 secs to check 9757 sequences from group H8_09.
+
+It took 1302 secs to check 7390 sequences from group G_08.
+
+It took 3073 secs to check 13031 sequences from group H8_06.
+
+It took 1553 secs to check 8575 sequences from group G_05.
+
+It took 2089 secs to check 9942 sequences from group B8_08.
+
+It took 1754 secs to check 9379 sequences from group B8_05.
+
+It took 2247 secs to check 10986 sequences from group B8_02.
+
+It took 3601 secs to check 14337 sequences from group H8_03.
+
+It took 1108 secs to check 7566 sequences from group H8_07.
+
+It took 2995 secs to check 12490 sequences from group H8_01.
+
+It took 1287 secs to check 7835 sequences from group B8_09.
+
+It took 1160 secs to check 7696 sequences from group H8_04.
+
+It took 1477 secs to check 8411 sequences from group B8_03.
+
+It took 2692 secs to check 12936 sequences from group H8_10.
+
+It took 2774 secs to check 13166 sequences from group B8_06.
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.chimeras
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos
+
+
+mothur > remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
+[WARNING]: This command can take a namefile and you did not provide one. The current namefile is /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.names which seems to match ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta.
+Removed 74986 sequences from your fasta file.
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta
+
+
+mothur > summary.seqs(fasta=current, count=current,processors=10)
+Using /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table as input file for the count parameter.
+Using /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	577	239	0	3	1
+2.5%-tile:	1	577	253	0	4	31131
+25%-tile:	1	577	253	0	4	311310
+Median: 	1	577	253	0	5	622620
+75%-tile:	1	577	253	0	5	933930
+97.5%-tile:	1	577	254	0	7	1214109
+Maximum:	1	577	273	0	8	1245239
+Mean:	1	577	253.099	0	4.72818
+# of unique seqs:	129921
+total # of seqs:	1245239
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.summary
+
+It took 3 secs to summarize 1245239 sequences.
+
+mothur > classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
+
+Using 10 processors.
+Reading template taxonomy...     DONE.
+Reading template probabilities...     DONE.
+It took 10 seconds get probabilities. 
+Classifying sequences from ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta ...
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_8359_5790 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_19715_7001 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_21155_23614 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_11100_23408 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_17071_2863 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_20905_18616 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_24299_13155 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_14833_6029 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_14705_19522 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_16564_5284 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_12647_9095 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1104_22445_5872 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1112_27010_13622 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_27017_20350 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_3634_18060 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_28902_15277 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_22462_10441 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_20540_17710 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_12640_14280 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_14690_2466 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_22550_26361 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2105_25073_5358 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_11644_16755 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_5877_13877 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2102_11329_2167 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24880_13823 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2104_18477_1849 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_17566_15525 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_27931_10049 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_16999_8451 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_13483_12605 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1106_19507_18928 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2104_9198_19726 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1102_19446_11226 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_18787_22679 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_3266_14826 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_18509_18044 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24722_20398 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1105_4828_18692 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_19349_23830 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_16894_10881 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_21208_23524 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_21931_13281 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_11346_20568 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_12761_24470 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2108_15416_21023 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_7769_10263 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_20164_15476 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2109_17848_8718 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2105_15864_13363 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1106_17430_4580 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1103_13446_8642 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_27498_14671 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2102_19146_26206 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2112_17455_4722 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_15693_2055 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_20108_9521 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_28179_16163 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_7494_5232 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_27003_17585 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+
+It took 445 secs to classify 129921 sequences.
+
+
+It took 8 secs to create the summary file for 129921 sequences.
+
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.tax.summary
+
+
+mothur > remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+
+[NOTE]: The count file should contain only unique names, so mothur assumes your fasta, list and taxonomy files also contain only uniques.
+
+
+Output File Names: 
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta
+/data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table
+
+
+mothur > quit()
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Detected 6 [WARNING] messages, please review.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

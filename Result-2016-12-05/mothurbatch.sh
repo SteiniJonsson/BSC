@@ -34,6 +34,12 @@ mothur m24
 #echo "Start m26 at $(date)" >> oplog
 #mothur m26
 
+############################################################################
+################### EXECUTION WILL STOP HERE ###############################
+############################################################################
+exit 42 
+
+# We will skip everything beond this point
 echo "Start m27 at $(date)" >> oplog
 mothur m27
 
@@ -67,9 +73,8 @@ mothur m36
 echo "Start m37 at $(date)" >> oplog
 mothur m37
 
-# m39 gives and error which we need to look at.
-#echo "Start m38 at $(date)" >> oplog
-#mothur m38
+echo "Start m38 at $(date)" >> oplog
+mothur m38
 
 echo "Start m39 at $(date)" >> oplog
 mothur m39
@@ -80,18 +85,17 @@ mothur m40
 echo "Start m41 at $(date)" >> oplog
 mothur m41
 
-# m42 gives an error which we need to look at.
-#echo "Start m42 at $(date)" >> oplog
-#mothur m42
+echo "Start m42 at $(date)" >> oplog
+mothur m42
 
-#echo "Start m43 at $(date)" >> oplog
-#mothur m43
+echo "Start m43 at $(date)" >> oplog
+mothur m43
 
 echo "Start m44 at $(date)" >> oplog
 mothur m44
 
-#echo "Start m45 at $(date)" >> oplog
-#mothur m45
+echo "Start m45 at $(date)" >> oplog
+mothur m45
 
 echo "Start m46 at $(date)" >> oplog
 mothur m46
