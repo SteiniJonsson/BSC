@@ -1,0 +1,240 @@
+<h1 id="keyrsla-6.-des-2016">Keyrsla 6. des 2016</h1>
+<h2 id="mothur10---mothur.1480941150.logfile">mothur10 - mothur.1480941150.logfile</h2>
+<h3 id="kl.-1238">Kl. 12:38</h3>
+<ul>
+<li><strong>make.contigs(file=BSC16s.file,processors=10)</strong></li>
+<li><strong>summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta,processors=10)</strong></li>
+<li><strong>screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta, group=./outFiles/BSC16s.contigs.groups, maxambig=0, maxlength=300,processors=10)</strong></li>
+</ul>
+<p>Engar villur/athugasemdir</p>
+<h2 id="mothur20---mothur.1480941508.logfile">mothur20 - mothur.1480941508.logfile</h2>
+<h3 id="kl.-1614">Kl. 16:14</h3>
+<ul>
+<li><strong>unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)</strong></li>
+<li><strong>count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)</strong></li>
+<li><strong>summary.seqs(count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)</strong></li>
+<li><strong>align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)</strong></li>
+</ul>
+<p>Hér kemur warning: [WARNING]: Some of your sequences generated alignments that eliminated too many bases, a list is provided in /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.flip.accnos. If you set the flip parameter to true mothur will try aligning the reverse compliment as well.</p>
+<ul>
+<li><strong>summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)</strong></li>
+</ul>
+<p>Start End NBases Ambigs Polymer NumSeqs<br />
+Minimum: 0 0 0 0 1 1<br />
+2.5%-tile: 13862 23444 253 0 4 33682<br />
+25%-tile: 13862 23444 253 0 4 336816<br />
+Median: 13862 23444 253 0 5 673631<br />
+75%-tile: 13862 23444 253 0 5 1010446<br />
+97.5%-tile: 13862 23444 254 0 7 1313580<br />
+Maximum: 26105 26105 296 0 25 1347261<br />
+Mean: 13898.7 23403.8 251.142 0 4.73304<br />
+no of unique seqs: 1140370<br />
+total # of seqs: 1347261</p>
+<ul>
+<li><strong>screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)</strong></li>
+<li><strong>summary.seqs(fasta=current, count=current,processors=10)</strong><br />
+</li>
+<li><strong>filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)</strong></li>
+<li><strong>unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)</strong></li>
+<li><p><strong>pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)</strong></p></li>
+<li><strong>chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)</strong></li>
+<li><p><strong>remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)</strong></p></li>
+</ul>
+<p>Hér kemur warning: [WARNING]: This command can take a namefile and you did not provide one. The current namefile is /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.names which seems to match ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta.</p>
+<ul>
+<li><strong>summary.seqs(fasta=current, count=current,processors=10)</strong></li>
+<li><strong>classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)</strong></li>
+</ul>
+<p><font color="Yellow">Hér koma 60 warning:</font> [WARNING]: M03555_131_000000000-ANG5J_1_2110_8359_5790 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.</p>
+<ul>
+<li><strong>remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)</strong></li>
+</ul>
+<p>Hér kemur 1 athugasemd: [NOTE]: The count file should contain only unique names, so mothur assumes your fasta, list and taxonomy files also contain only uniques.</p>
+<h2 id="m19---mothur.1480954466.logfile">m19 - mothur.1480954466.logfile</h2>
+<h3 id="kl.-1640">Kl. 16:40</h3>
+<ul>
+<li><strong>cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)</strong></li>
+</ul>
+<blockquote>
+<p>Engar athugasemdir</p>
+</blockquote>
+<h2 id="m20---mothur.1480956027.logfile">m20 - mothur.1480956027.logfile</h2>
+<h3 id="kl.-1640-1">Kl. 16:40</h3>
+<ul>
+<li><strong>make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)</strong></li>
+</ul>
+<blockquote>
+<p>Engar athugasemdir</p>
+</blockquote>
+<h2 id="m21---mothur.1480956038.logfile">m21 - mothur.1480956038.logfile</h2>
+<h3 id="kl.-1640-2">Kl. 16:40</h3>
+<ul>
+<li><strong>classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)</strong></li>
+</ul>
+<p>Hér koma 5195 warning: [WARNING]: M03555_131_000000000-ANG5J_1_2105_9329_6374 is not in your taxonomy file. I will not include it in the consensus.<br />
+<font color="Yellow">Hér þarf að skoða hvort þetta sé stór hluti af niðurstöðunni og hvort þetta er eðililegt.</font></p>
+<h2 id="m22---mothur.1480956053.logfile">m22 - mothur.1480956053.logfile</h2>
+<h3 id="kl.-1640-3">Kl. 16:40</h3>
+<ul>
+<li><strong>phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)</strong> Engar athugasemdir</li>
+</ul>
+<h2 id="m23---mothur.1480956059.logfile">m23 - mothur.1480956059.logfile</h2>
+<h3 id="kl.-1641">Kl. 16:41</h3>
+<ul>
+<li><strong>make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)</strong></li>
+</ul>
+<p><font color="Red">Hér koma 5195 villur:</font> [ERROR]: M03555_131_000000000-ANG5J_1_1101_10177_4300 is in your groupfile and not your listfile. Please correct. Þær eru tengdar warnings sem koma í classify.otu og því á sama athugasemd við hér og þar.</p>
+<h2 id="m24---mothur.1480956063.logfile">m24 - mothur.1480956063.logfile</h2>
+<h3 id="kl.-1641-1">Kl. 16:41</h3>
+<ul>
+<li><strong>classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)</strong></li>
+</ul>
+<p>Engar athugasemdir</p>
+<h2 id="m25---ekki-keyrt">m25 - ekki keyrt</h2>
+<h2 id="m26---ekki-keyrt">m26 - ekki keyrt</h2>
+<h2 id="m27---mothur.1480958996.logfile">m27 - mothur.1480958996.logfile</h2>
+<ul>
+<li><strong>mothur &gt; system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)</strong></li>
+<li><strong>mothur &gt; system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)</strong><br />
+Engar athugasemdir</li>
+</ul>
+<h2 id="m28---mothur.1480959017.logfile">m28 - mothur.1480959017.logfile</h2>
+<ul>
+<li><strong>mothur &gt; count.groups(shared=./outFiles/BSC16s.an.shared)</strong></li>
+<li>B8_01 contains 41878.</li>
+<li>B8_02 contains 41523.</li>
+<li>B8_03 contains 46241.</li>
+<li>B8_04 contains 44744.</li>
+<li>B8_05 contains 49954.</li>
+<li>B8_06 contains 43502.</li>
+<li>B8_07 contains 44889.</li>
+<li>B8_08 contains 41396.</li>
+<li>B8_09 contains 36619.</li>
+<li>B8_10 contains 38036.</li>
+<li>G_01 contains 35033.</li>
+<li>G_02 contains 38991.</li>
+<li>G_03 contains 42011.</li>
+<li>G_04 contains 47549.</li>
+<li>G_05 contains 47466.</li>
+<li>G_06 contains 41295.</li>
+<li>G_07 contains 35138.</li>
+<li>G_08 contains 41442.</li>
+<li>G_09 contains 37065.</li>
+<li>G_10 contains 40194.</li>
+<li>H8_01 contains 49457.</li>
+<li>H8_02 contains 30597.</li>
+<li>H8_03 contains 37188.</li>
+<li>H8_04 contains 44568.</li>
+<li>H8_05 contains 39951.</li>
+<li>H8_06 contains 47882.</li>
+<li>H8_07 contains 33153.</li>
+<li>H8_08 contains 37163.</li>
+<li>H8_09 contains 48533.</li>
+<li>H8_10 contains 41781.</li>
+</ul>
+<p>Total seqs: 1245239.</p>
+<h2 id="m29---mothur.1480959029.logfile">m29 - mothur.1480959029.logfile</h2>
+<ul>
+<li><strong>mothur &gt; sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)</strong> Sampling 2241 from each group. 0.03<br />
+<font color="Yellow">Þarf að breyta size?</font></li>
+</ul>
+<p>Output file ( BSC16s.an.0.03.subsample.shared ) er notað í eftirarandi skipunum:<br />
+* heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50) * venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=F3D0-F3D1-F3D2-F3D3) * corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3) * get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10) * metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10) * classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)</p>
+<h2 id="m30---mothur.1480959040.logfile">m30 - mothur.1480959040.logfile</h2>
+<ul>
+<li><strong>mothur &gt; rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)</strong></li>
+</ul>
+<h2 id="m31---mothur.1480959078.logfile">m31 - mothur.1480959078.logfile</h2>
+<ul>
+<li><strong>mothur &gt; summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)</strong><br />
+<font color="Yellow">Er subsample rétt?</font></li>
+</ul>
+<p>Breyttum subsample úr 2441 í T.<br />
+Skv. manual þá er notuð stærð úr minnsta hópnum. &gt; The subsample parameter allows you to enter the size of the sample or you can set subsample=T and mothur will use the size of your smallest group in the case of a shared file. With a list, sabund or rabund file you must provide a subsample size.</p>
+<h2 id="m32---mothur.1480959215.logfile">m32 - mothur.1480959215.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m33---mothur.1480959229.logfile">m33 - mothur.1480959229.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m34---mothur.1480959552.logfile">m34 - mothur.1480959552.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m35---mothur.1480959563.logfile">m35 - mothur.1480959563.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m36---mothur.1480959573.logfile">m36 - mothur.1480959573.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m37---mothur.1480959586.logfile">m37 - mothur.1480959586.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m38---mothur.1480959597.logfile">m38 - mothur.1480959597.logfile</h2>
+<ul>
+<li><strong>mothur &gt; parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design, groups=all,processors=10)</strong><br />
+Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design</li>
+</ul>
+<p>Using 10 processors.<br />
+<font color="Red">[ERROR]: did not complete parsimony.<br />
+Hér þarf að skoða parameters!</font></p>
+<p><font color="Yellow">Hvernig á mouse.time.design að líta út? Dæmi af wiki er: &gt; F3D0 Early<br />
+&gt; F3D1 Early<br />
+&gt; F3D141 Late<br />
+&gt; F3D142 Late<br />
+&gt; F3D143 Late<br />
+&gt; F3D144 Late </font></p>
+<h2 id="m39---mothur.1480960067.logfile">m39 - mothur.1480960067.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="m40---mothur.1480960080.logfile">m40 - mothur.1480960080.logfile</h2>
+<ul>
+<li><strong>mothur &gt; nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)</strong> Processing Dimension: 2 1 2 3 4 5 6 7 8 9 10</li>
+</ul>
+<p>Number of dimensions: 2 Lowest stress : 0.216387 R-squared for configuration: 0.85933</p>
+<h2 id="m41---mothur.1480960090.logfile">m41 - mothur.1480960090.logfile</h2>
+<ul>
+<li><strong>mothur &gt; nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)</strong> Processing Dimension: 3 1 2 3 4 5 6 7 8 9 10</li>
+</ul>
+<p>Number of dimensions: 3 Lowest stress : 0.1514 R-squared for configuration: 0.886948</p>
+<h2 id="m42---mothur.1480960104.logfile">m42 - mothur.1480960104.logfile</h2>
+<ul>
+<li><strong>mothur &gt; amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)</strong><br />
+Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design<br />
+<font color="Red">[ERROR]: did not complete amova.<br />
+Hér þarf að skoða parameters!</font></li>
+</ul>
+<h2 id="m43---mothur.1480960226.logfile">m43 - mothur.1480960226.logfile</h2>
+<ul>
+<li><strong>mothur &gt; homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)</strong> Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design<br />
+<font color="Red">[ERROR]: did not complete homova.<br />
+Hér þarf að skoða parameters!</font></li>
+</ul>
+<h2 id="m44---mothur.1480960259.logfile">m44 - mothur.1480960259.logfile</h2>
+<ul>
+<li><strong>mothur &gt; corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)</strong> You did not provide a label, I will use the first label in your inputfile.<br />
+<font color="Yellow">Þarf að bæta við label?</font></li>
+</ul>
+<h2 id="m45---mothur.1480960278.logfile">m45 - mothur.1480960278.logfile</h2>
+<ul>
+<li><strong>mothur &gt; corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)</strong><br />
+Unable to open mouse.dpw.metadata. Trying default /usr/local/bin/mouse.dpw.metadata Unable to open /usr/local/bin/mouse.dpw.metadata. Trying mothur's location /usr/local/bin/mouse.dpw.metadata Unable to open /usr/local/bin/mouse.dpw.metadata. Trying output directory /data/data02/asta/testrun/outFiles/mouse.dpw.metadata Unable to open /data/data02/asta/testrun/outFiles/mouse.dpw.metadata You did not provide a label, I will use the first label in your inputfile.<br />
+<font color="Red">[ERROR]: did not complete corr.axes.<br />
+Hér þarf að skoða parameters!</font></li>
+</ul>
+<h2 id="m46---mothur.1480960307.logfile">m46 - mothur.1480960307.logfile</h2>
+<ul>
+<li>mothur &gt; get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)<br />
+Using 1 processor 0.03 K NLE logDet BIC AIC Laplace 1 99950.2 5398.9 110508 106158 96944.92 109477 -3417.06 130594 121894 96358.4 quitting command... 3 123067 -12755.1 154742 141693 99573.3<br />
+<font color="Red">Þetta fékk trúlega ekki að klára. Þarf að keyra aftur.</font></li>
+</ul>
+<h2 id="mothur.1480966892.logfile">?? - mothur.1480966892.logfile</h2>
+<p>Engar athugasemdir</p>
+<h2 id="mothur.1481066810.logfile">?? - mothur.1481066810.logfile</h2>
+<ul>
+<li>mothur &gt; get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)<br />
+Using 1 processor 0.03 K NLE logDet BIC AIC Laplace 1 99950.2 5398.9 110508 106158 96944.92 109477 -3421.14 130594 121894 96356.43 124296 -14139.4 155972 142922 1001114 140046 inf 182280 164881 inf5 153334 -35888.3 206127 184378 106862</li>
+</ul>
+<h2 id="m47---mothur.1481101793.logfile">m47 - mothur.1481101793.logfile</h2>
+<ul>
+<li>mothur &gt; metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)<br />
+Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design</li>
+</ul>
+<p>Using 10 processors.<br />
+<font color="Red">[ERROR]: did not complete metastats.<br />
+Hér þarf að skoða parameters!<br />
+</font></p>
+<h2 id="m48-m49-m50-og-m51-hafa-ekki-verið-keyrð.">m48, m49, m50 og m51 hafa ekki verið keyrð.</h2>
+<h1 id="endir">Endir</h1>

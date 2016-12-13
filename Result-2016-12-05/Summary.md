@@ -136,14 +136,28 @@
 * **mothur > sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)**
    Sampling 2241 from each group.
    0.03  
-<font color="Yellow">Þarf að breyta size?</font>   
+<font color="Yellow">Þarf að breyta size?</font>  
+
+Output file ( BSC16s.an.0.03.subsample.shared ) er notað í eftirarandi skipunum:   
+* heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+* venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=F3D0-F3D1-F3D2-F3D3)
+* corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
+* get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)
+* metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)
+* classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)
+   
 
 ## m30 - mothur.1480959040.logfile
 * **mothur > rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)**
 
 ## m31 - mothur.1480959078.logfile
-* **mothur > summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=2441)**  
-<font color="Yellow">Er subsample rétt?</font>   
+* **mothur > summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)**  
+<font color="Yellow">Er subsample rétt?</font>  
+
+Breyttum subsample úr 2441 í T.  
+Skv. manual þá er notuð stærð úr minnsta hópnum.
+> The subsample parameter allows you to enter the size of the sample or you can set subsample=T and mothur will use the size of your smallest group in the case of a shared file. With a list, sabund or rabund file you must provide a subsample size.
+
 
 ## m32 - mothur.1480959215.logfile  
    Engar athugasemdir
@@ -174,7 +188,16 @@
    Using 10 processors.  
    <font color="Red">[ERROR]: did not complete parsimony.  
    Hér þarf að skoða parameters!</font>      
-**</font>
+
+<font color="Yellow">Hvernig á mouse.time.design að líta út?
+Dæmi af wiki er:
+> F3D0	Early  
+> F3D1	Early  
+> F3D141	Late  
+> F3D142	Late  
+> F3D143	Late  
+> F3D144	Late
+</font>  
 
 ## m39 - mothur.1480960067.logfile
    Engar athugasemdir   
