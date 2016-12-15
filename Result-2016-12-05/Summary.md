@@ -133,10 +133,13 @@
    Total seqs: 1245239.
 
 ## m29 - mothur.1480959029.logfile
-* **mothur > sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)**
-   Sampling 2241 from each group.
-   0.03  
-<font color="Yellow">Þarf að breyta size?</font>  
+* **mothur > sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)**
+Sampling 30597 from each group.
+0.03
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.0.03.subsample.shared
+Búið að breyta size.  
 
 Output file ( BSC16s.an.0.03.subsample.shared ) er notað í eftirarandi skipunum:   
 * heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
@@ -149,6 +152,10 @@ Output file ( BSC16s.an.0.03.subsample.shared ) er notað í eftirarandi skipunu
 
 ## m30 - mothur.1480959040.logfile
 * **mothur > rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)**
+Engar athugasemdir.  
+Output File Names:  
+/data/data02/asta/testrun/outFiles/BSC16s.an.groups.rarefaction  
+
 
 ## m31 - mothur.1480959078.logfile
 * **mothur > summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)**  
@@ -158,153 +165,326 @@ Breyttum subsample úr 2441 í T.
 Skv. manual þá er notuð stærð úr minnsta hópnum.
 > The subsample parameter allows you to enter the size of the sample or you can set subsample=T and mothur will use the size of your smallest group in the case of a shared file. With a list, sabund or rabund file you must provide a subsample size.
 
+Engar athugasemdir.  
+Output File Names:  
+/data/data02/asta/testrun/outFiles/BSC16s.an.groups.ave-std.summary  
+/data/data02/asta/testrun/outFiles/BSC16s.an.groups.summary  
+
 
 ## m32 - mothur.1480959215.logfile  
-   Engar athugasemdir
+* **mothur > heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)**  
 
-## m33 - mothur.1480959229.logfile
+   Output File Names:  
+   /data/data02/asta/testrun/outFiles/BSC16s.an.0.03.subsample.0.03.heatmap.bin.svg  
    Engar athugasemdir  
 
-## m34 - mothur.1480959552.logfile
-   Engar athugasemdir  
+## m33
+* **mothur > dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)**  
 
-## m35 - mothur.1480959563.logfile
-   Engar athugasemdir  
+Using 10 processors.
+0.03
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
 
-## m36 - mothur.1480959573.logfile
-   Engar athugasemdir  
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.dist
+/data/data02/asta/testrun/outFiles/BSC16s.an.jclass.0.03.lt.dist
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.std.dist
+/data/data02/asta/testrun/outFiles/BSC16s.an.jclass.0.03.lt.ave.dist
+/data/data02/asta/testrun/outFiles/BSC16s.an.jclass.0.03.lt.std.dist
 
-## m37 - mothur.1480959586.logfile
-   Engar athugasemdir  
 
-## m38 - mothur.1480959597.logfile
 
-* **mothur > parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design,  groups=all,processors=10)**  
-   Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design
-   Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design
+## m34
+* **mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)** 
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.heatmap.sim.svg
    
-   Using 10 processors.  
-   <font color="Red">[ERROR]: did not complete parsimony.  
-   Hér þarf að skoða parameters!</font>      
+   Engar athugasemdir  
 
-<font color="Yellow">Hvernig á mouse.time.design að líta út?
-Dæmi af wiki er:
-> F3D0	Early  
-> F3D1	Early  
-> F3D141	Late  
-> F3D142	Late  
-> F3D143	Late  
-> F3D144	Late
-</font>  
+## m35
+* **mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)**  
 
-## m39 - mothur.1480960067.logfile
-   Engar athugasemdir   
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.jclass.0.03.lt.ave.heatmap.sim.svg
 
-## m40 - mothur.1480960080.logfile
-* **mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)**
-   Processing Dimension: 2
-   1
-   2
-   3
-   4
-   5
-   6
-   7
-   8
-   9
-   10
-   
-   Number of dimensions:	2
-   Lowest stress :	0.216387
-   R-squared for configuration:	0.85933
+   Engar athugasemdir  
+
+## m36
+mothur > venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=B8_01-B8_02)
+0.03
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.0.03.subsample.0.03.sharedsobs.B8_01-B8_02.svg
+/data/data02/asta/testrun/outFiles/BSC16s.an.0.03.subsample.0.03.sharedsobs.B8_01-B8_02.sharedotus
+
+   Engar athugasemdir  
+  <font color="Yellow">Hér þarf að ákveða hvaða grúppur á að nota.</font>
+
+
+## m37
+* **mothur > tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)**  
+
+Using 10 processors.
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     ||||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+Tree complete.
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre
+
+   Engar athugasemdir  
+
+## m38
+* **mothur > parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)**  
+
+Using 10 processors.
+********************#****#****#****#****#****#****#****#****#****#****#
+Comparing to random:||||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+Tree#   Groups  ParsScore       ParsSig
+1       birki_vidi_eyjur_B-birki_vidi_eyjur_H   2       <0.001
+
+1       birki_vidi_eyjur_B-vakalag      1       <0.001
+
+1       birki_vidi_eyjur_H-vakalag      1       <0.001
+
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre.parsimony
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre.psummary
+
+## m39
+* **mothur > pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)**  
+
+Processing...
+Rsq 1 axis: 0.778708
+Rsq 2 axis: 0.890316
+Rsq 3 axis: 0.902949
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.pcoa.axes
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.pcoa.loadings
+
+
+## m40
+* **mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)**  
+Processing Dimension: 2
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Number of dimensions:   2
+Lowest stress : 0.216265
+R-squared for configuration:    0.859079
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.iters
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.stress
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
 
 ## m41 - mothur.1480960090.logfile
-* **mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)**
-   Processing Dimension: 3
-   1
-   2
-   3
-   4
-   5
-   6
-   7
-   8
-   9
-   10
-   
-   Number of dimensions:	3
-   Lowest stress :	0.1514
-   R-squared for configuration:	0.886948
+* **mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)**  
+Processing Dimension: 3
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
 
-## m42 - mothur.1480960104.logfile
-* **mothur > amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)**   
-   Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design
-   Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design  
-   <font color="Red">[ERROR]: did not complete amova.  
-   Hér þarf að skoða parameters!</font>
+Number of dimensions:   3
+Lowest stress : 0.151175
+R-squared for configuration:    0.886765
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.iters
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.stress
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
 
 
-## m43 - mothur.1480960226.logfile
-* **mothur > homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)**
-   Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design
-   Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design  
-   <font color="Red">[ERROR]: did not complete homova.  
-   Hér þarf að skoða parameters!</font>
+## m42
+* **mothur > amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)**  
+birki_vidi_eyjur_B-birki_vidi_eyjur_H-vakalag   Among   Within  Total
+SS      2.16841 2.93229 5.10069
+df      2       27      29
+MS      1.0842  0.108603
 
-## m44 - mothur.1480960259.logfile
-* **mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)**
-   You did not provide a label, I will use the first label in your inputfile.  
-   <font color="Yellow">Þarf að bæta við label?</font>   
+Fs:     9.98315
+p-value: <0.001*
 
-## m45 - mothur.1480960278.logfile
-* **mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)**   
-   Unable to open mouse.dpw.metadata. Trying default /usr/local/bin/mouse.dpw.metadata
-   Unable to open /usr/local/bin/mouse.dpw.metadata. Trying mothur's location /usr/local/bin/mouse.dpw.metadata
-   Unable to open /usr/local/bin/mouse.dpw.metadata. Trying output directory /data/data02/asta/testrun/outFiles/mouse.dpw.metadata
-   Unable to open /data/data02/asta/testrun/outFiles/mouse.dpw.metadata
-   You did not provide a label, I will use the first label in your inputfile.  
-   <font color="Red">[ERROR]: did not complete corr.axes.  
-   Hér þarf að skoða parameters!</font>
+birki_vidi_eyjur_B-birki_vidi_eyjur_H   Among   Within  Total
+SS      0.742843        2.28448 3.02732
+df      1       18      19
+MS      0.742843        0.126916
+
+Fs:     5.85305
+p-value: <0.001*
+
+birki_vidi_eyjur_B-vakalag      Among   Within  Total
+SS      0.970985        1.29124 2.26223
+df      1       18      19
+MS      0.970985        0.0717358
+
+Fs:     13.5356
+p-value: <0.001*
+
+birki_vidi_eyjur_H-vakalag      Among   Within  Total
+SS      1.53878 2.28885 3.82763
+df      1       18      19
+MS      1.53878 0.127158
+
+Fs:     12.1013
+p-value: <0.001*
+
+Experiment-wise error rate: 0.05
+Pair-wise error rate (Bonferroni): 0.0166667
+If you have borderline P-values, you should try increasing the number of iterations
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.amova
+
+
+## m43
+* **mothur > homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)**  
+HOMOVA  BValue  P-value SSwithin/(Ni-1)_values
+birki_vidi_eyjur_B-birki_vidi_eyjur_H-vakalag   2.66963 <0.001* 0.0714929       0.182338        0.0719786
+birki_vidi_eyjur_B-birki_vidi_eyjur_H   1.80402 0.003*  0.0714929       0.182338
+birki_vidi_eyjur_B-vakalag      9.7722e-05      0.983   0.0714929       0.0719786
+birki_vidi_eyjur_H-vakalag      1.77889 <0.001* 0.182338        0.0719786
+
+Experiment-wise error rate: 0.05
+Pair-wise error rate (Bonferroni): 0.0166667
+If you have borderline P-values, you should try increasing the number of iterations
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.thetayc.0.03.lt.ave.homova
+
+
+## m44
+* **mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)**  
+You did not provide a label, I will use the first label in your inputfile.
+
+Output File Names:
+/data/data02/asta/testrun/outFiles/BSC16s.an.0.03.subsample.spearman.corr.axes
+
+
+## m45
+mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)
+Unable to open mouse.dpw.metadata. Trying default /usr/local/bin/mouse.dpw.metadata
+Unable to open /usr/local/bin/mouse.dpw.metadata. Trying mothur's location /usr/local/bin/mouse.dpw.metadata
+Unable to open /usr/local/bin/mouse.dpw.metadata. Trying output directory /data/data02/asta/testrun/outFiles/mouse.dpw.metadata
+Unable to open /data/data02/asta/testrun/outFiles/mouse.dpw.metadata
+You did not provide a label, I will use the first label in your inputfile.
+[ERROR]: did not complete corr.axes.
+
+mothur > quit()
+
+
+************************************************************
+************************************************************
+************************************************************
+Detected 1 [ERROR] messages, please review.
+************************************************************
+************************************************************
+************************************************************
+<font color="Red">Hvar verður þessi metadata file til?</font>
 
 ## m46 - mothur.1480960307.logfile
-      
-* mothur > get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)   
-   Using 1 processor
-   0.03
-   K	NLE		logDet	BIC		AIC		Laplace
-   1	99950.2	5398.9	110508	106158	96944.92	109477	-3417.06	130594	121894	96358.4
-   quitting command...
-   3	123067	-12755.1	154742	141693	99573.3  
-<font color="Red">Þetta fékk trúlega ekki að klára. Þarf að keyra aftur.</font>
+* **mothur > get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)**  
+Using 1 processor  
+0.03  
+K       NLE             logDet  BIC             AIC             Laplace  
+<font color="Yellow">Þetta mun trúlega taka langan tíma og því geymum við það.</font>
 
 
-## ?? - mothur.1480966892.logfile
+## m47
+* **mothur > metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design,processors=10)**  
+
+Using 10 processors.
+0.03
+Comparing birki_vidi_eyjur_H and birki_vidi_eyjur_B...
+
+Comparing vakalag and birki_vidi_eyjur_B...
+
+Comparing vakalag and birki_vidi_eyjur_H...
+
    Engar athugasemdir   
 
-## ?? - mothur.1481066810.logfile
-* mothur > get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)   
-   Using 1 processor
-   0.03
-   K	NLE		logDet	BIC		AIC		Laplace
-   1	99950.2	5398.9	110508	106158	96944.92	109477	-3421.14	130594	121894	96356.43	124296	-14139.4	155972	142922	1001114	140046	inf	182280	164881	inf5	153334	-35888.3	206127	184378	106862
+## m48
+* **mothur > classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design)**  
+Invalid command.  
+<font color="Red">Þar fór það. Er komið eitthvað annað í staðin?</font>
 
-## m47 - mothur.1481101793.logfile
-* mothur > metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)   
-   Unable to open mouse.time.design. Trying default /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying mothur's location /usr/local/bin/mouse.time.design
-   Unable to open /usr/local/bin/mouse.time.design. Trying output directory /data/data02/asta/testrun/outFiles/mouse.time.design
-   Unable to open /data/data02/asta/testrun/outFiles/mouse.time.design
+## m49
+* **mothur > phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)**  
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying output directory /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
 
-   Using 10 processors.   
-   <font color="Red">[ERROR]: did not complete metastats.   
-   Hér þarf að skoða parameters!      
-   </font>
+Using 10 processors.
+[ERROR]: did not complete phylo.diversity.
 
-## m48, m49, m50 og m51 hafa ekki verið keyrð.
+mothur > quit()
+
+Detected 1 [ERROR] messages, please review.  
+<font color="Red">Hvar verður þessi .tre til?</font>
+
+
+## m50
+* **mothur > unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)**  
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying output directory /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre
+
+Using 10 processors.
+[ERROR]: did not complete unifrac.unweighted.
+
+mothur > quit()
+
+Detected 1 [ERROR] messages, please review.  
+<font color="Red">Sama villa og í m49.</font>
+
+## m51
+* **mothur > unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)**  
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre. Trying output directory /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre  
+Unable to open /data/data02/asta/testrun/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre
+
+Using 10 processors.
+[ERROR]: did not complete unifrac.weighted.
+
+mothur > quit()
+
+Detected 1 [ERROR] messages, please review.  
+<font color="Red">Sama villa og í m49.</font>
+
+
+
+
 # Endir

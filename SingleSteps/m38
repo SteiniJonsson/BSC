@@ -1,2 +1,2 @@
 set.dir(output=./outFiles)
-parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design,  groups=all,processors=10)
+parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)
