@@ -1,2 +1,2 @@
 set.dir(output=./outFiles)
-sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)
+sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)

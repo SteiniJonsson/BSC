@@ -28,7 +28,9 @@ chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.uniq
 remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
 summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table,processors=10)
 classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
-remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+
+# We don't want to remove those groups. Skip for now according to Saemi. Steini, Dec 15.
+# remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
 
 #---------------------------------------------------------------------------------------------------
 # 30. Assessing error rates
@@ -58,30 +60,44 @@ remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.uniq
 cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
 
 make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+
+# 21
 classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
 
 #---------------------------------------------------------------------------------------------------
 # 50.10 Phylotypes
 #---------------------------------------------------------------------------------------------------
+# 22
 phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)
+
+# 23
 make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)
+
+# 24
 classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)
 
 #---------------------------------------------------------------------------------------------------
 # 50.20 Phylogenetic
 #   Can skip according to Saemundur.
 #---------------------------------------------------------------------------------------------------
+# 25
 #dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, output=lt, processors=10,processors=10)
+
+# 26
 #clearcut(phylip=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.dist)
 
 #---------------------------------------------------------------------------------------------------
 # 60. Analysis
 #---------------------------------------------------------------------------------------------------
+# 27
 system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)
 system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)
 
+# 28
 count.groups(shared=./outFiles/BSC16s.an.shared)
-sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)
+
+# 29
+sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)
 
 #---------------------------------------------------------------------------------------------------
 # 70. OTU-based analysis
@@ -90,33 +106,71 @@ sub.sample(shared=./outFiles/BSC16s.an.shared, size=2241)
 #---------------------------------------------------------------------------------------------------
 # 70.10 Alpha diversity
 #---------------------------------------------------------------------------------------------------
+# 30
 rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
-summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=2441)
+
+# 31
+summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)
 
 #---------------------------------------------------------------------------------------------------
 # 70.20 Beta diversity measurements
 #---------------------------------------------------------------------------------------------------
+# 32
 heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+
+# 33
 dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
+
+# 34
 heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 35
 heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
-venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=F3D0-F3D1-F3D2-F3D3)
+
+# 36
+venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=B8_01-B8_02)
+
+# 37
 tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
-parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=mouse.time.design,  groups=all,processors=10)
+
+# 38
+parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)
+
+# 39
 pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 40
 nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 41
 nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)
-amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)
-homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=mouse.time.design)
+
+# 42
+amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+
+# 43
+homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+
+# 44
 corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
-corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)
-get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)
+
+# 45
+# Skip according to Saemi (for the time being). Steini, Dec 15
+#corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)
+
+# 46
+# It will take very long time to complete if it will complete at all. Skip according to Saemi. Steini, Dec 15.
+# get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)
 
 #---------------------------------------------------------------------------------------------------
 # 70.30 Population-level analysis
 #---------------------------------------------------------------------------------------------------
-metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design,processors=10)
-classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time.design)
+# 47
+metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design,processors=10)
+
+# 48
+# Obsolete command. Skip.
+# classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design)
 
 #---------------------------------------------------------------------------------------------------
 # 80. Phylogeny-based analysis
@@ -125,12 +179,20 @@ classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=mouse.time
 #---------------------------------------------------------------------------------------------------
 # 80.10 Alpha diversity
 #---------------------------------------------------------------------------------------------------
-phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)
+# 49
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
+#phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)
 
 #---------------------------------------------------------------------------------------------------
 # 80.20 Beta diversity
 #    Here we need more info on how to make the tree and mouse.time.design
 #---------------------------------------------------------------------------------------------------
+
+# 50
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
 #unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+
+# 51
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
 #unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
 
