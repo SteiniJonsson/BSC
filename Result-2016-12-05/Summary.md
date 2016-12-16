@@ -410,7 +410,7 @@ Detected 1 [ERROR] messages, please review.
 ************************************************************
 ************************************************************
 ************************************************************
-<font color="Red">Hvar verður þessi metadata file til?</font>
+<font color="Red">Hvar verður þessi metadata file til? Það má sleppa þessu.</font>
 
 ## m46 - mothur.1480960307.logfile
 * **mothur > get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)**  
@@ -436,7 +436,7 @@ Comparing vakalag and birki_vidi_eyjur_H...
 ## m48
 * **mothur > classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design)**  
 Invalid command.  
-<font color="Red">Þar fór það. Er komið eitthvað annað í staðin?</font>
+<font color="Red">Þar fór það. Er komið eitthvað annað í staðin? Nei.</font>
 
 ## m49
 * **mothur > phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)**  
@@ -451,7 +451,7 @@ Using 10 processors.
 mothur > quit()
 
 Detected 1 [ERROR] messages, please review.  
-<font color="Red">Hvar verður þessi .tre til?</font>
+<font color="Red">Hvar verður þessi .tre til? Sleppa í bili.</font>
 
 
 ## m50
@@ -467,7 +467,7 @@ Using 10 processors.
 mothur > quit()
 
 Detected 1 [ERROR] messages, please review.  
-<font color="Red">Sama villa og í m49.</font>
+<font color="Red">Sama villa og í m49. Sleppa í bili.</font>
 
 ## m51
 * **mothur > unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)**  
@@ -482,7 +482,7 @@ Using 10 processors.
 mothur > quit()
 
 Detected 1 [ERROR] messages, please review.  
-<font color="Red">Sama villa og í m49.</font>
+<font color="Red">Sama villa og í m49. Sleppa í bili.</font>
 
 
 
