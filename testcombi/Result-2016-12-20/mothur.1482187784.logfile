@@ -1,0 +1,593 @@
+Linux version
+
+Using ReadLine
+
+Running 64Bit Version
+
+mothur v.1.38.1
+Last updated: 8/9/2016
+
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+University of Michigan
+pschloss@umich.edu
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+Type 'quit()' to exit program
+Batch Mode
+
+
+mothur > set.dir(output=./outFiles)
+Mothur's directories:
+outputDir=/home/asta/testcombi/outFiles/
+
+mothur > make.contigs(file=BSC16s.file,processors=10)
+
+Using 10 processors.
+
+>>>>>	Processing file pair B8_allar_R1.fastq - B8_allar_R2.fastq (files 1 of 3)	<<<<<
+Making contigs...
+Done.
+
+It took 105 secs to assemble 549227 reads.
+
+
+>>>>>	Processing file pair G_allar_R1.fastq - G_allar_R2.fastq (files 2 of 3)	<<<<<
+Making contigs...
+Done.
+
+It took 105 secs to assemble 508109 reads.
+
+
+>>>>>	Processing file pair H8_allar_R1.fastq - H8_allar_R2.fastq (files 3 of 3)	<<<<<
+Making contigs...
+Done.
+
+It took 98 secs to assemble 536989 reads.
+
+It took 308 secs to process 1594325 sequences.
+
+Group count: 
+B8	549227
+G	508109
+H8	536989
+
+Total of all groups is 1594325
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.fasta
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.qual
+/home/asta/testcombi/outFiles/BSC16s.contigs.report
+/home/asta/testcombi/outFiles/BSC16s.scrap.contigs.fasta
+/home/asta/testcombi/outFiles/BSC16s.scrap.contigs.qual
+/home/asta/testcombi/outFiles/BSC16s.contigs.groups
+
+[WARNING]: your sequence names contained ':'.  I changed them to '_' to avoid problems in your downstream analysis.
+
+mothur > summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta,processors=10)
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	250	250	0	3	1
+2.5%-tile:	1	292	292	0	4	39859
+25%-tile:	1	294	294	0	4	398582
+Median: 	1	295	295	0	5	797163
+75%-tile:	1	296	296	0	5	1195744
+97.5%-tile:	1	362	362	3	7	1554467
+Maximum:	1	500	500	95	250	1594325
+Mean:	1	298.519	298.519	0.345685	4.83609
+# of Seqs:	1594325
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.summary
+
+It took 6 secs to summarize 1594325 sequences.
+
+mothur > screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta, group=./outFiles/BSC16s.contigs.groups, maxambig=0, maxlength=300,processors=10)
+
+Using 10 processors.
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.fasta
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.bad.accnos
+/home/asta/testcombi/outFiles/BSC16s.contigs.good.groups
+
+
+It took 14 secs to screen 1594325 sequences.
+
+mothur > unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)
+1347261	1140370
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.names
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.fasta
+
+
+mothur > count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)
+
+Using 10 processors.
+It took 7 secs to create a table for 1347261 sequences.
+
+
+Total number of sequences: 1347261
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.count_table
+
+
+mothur > summary.seqs(count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+Using /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	250	250	0	3	1
+2.5%-tile:	1	292	292	0	4	33682
+25%-tile:	1	294	294	0	4	336816
+Median: 	1	295	295	0	5	673631
+75%-tile:	1	296	296	0	5	1010446
+97.5%-tile:	1	298	298	0	7	1313580
+Maximum:	1	300	300	0	41	1347261
+Mean:	1	294.665	294.665	0	4.76457
+# of unique seqs:	1140370
+total # of seqs:	1347261
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.summary
+
+It took 12 secs to summarize 1347261 sequences.
+
+mothur > align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)
+
+Using 10 processors.
+
+Reading in the silva.v5.fasta template sequences...	DONE.
+It took 233 to read  135907 sequences.
+Aligning sequences from ./outFiles/BSC16s.trim.contigs.good.unique.fasta ...
+[WARNING]: Some of your sequences generated alignments that eliminated too many bases, a list is provided in /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.flip.accnos. If you set the flip parameter to true mothur will try aligning the reverse compliment as well.
+It took 2034 secs to align 1140370 sequences.
+
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.align
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.align.report
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.flip.accnos
+
+
+mothur > summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	0	0	0	0	1	1
+2.5%-tile:	13862	23444	253	0	4	33682
+25%-tile:	13862	23444	253	0	4	336816
+Median: 	13862	23444	253	0	5	673631
+75%-tile:	13862	23444	253	0	5	1010446
+97.5%-tile:	13862	23444	254	0	7	1313580
+Maximum:	26105	26105	296	0	25	1347261
+Mean:	13898.7	23403.8	251.142	0	4.73304
+# of unique seqs:	1140370
+total # of seqs:	1347261
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.summary
+
+It took 207 secs to summarize 1347261 sequences.
+
+mothur > screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)
+
+Using 10 processors.
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.summary
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.align
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.bad.accnos
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.good.count_table
+
+
+It took 793 secs to screen 1140370 sequences.
+
+mothur > summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, count=./outFiles/BSC16s.trim.contigs.good.good.count_table,processors=10)
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	13836	23444	239	0	3	1
+2.5%-tile:	13862	23444	253	0	4	33307
+25%-tile:	13862	23444	253	0	4	333063
+Median: 	13862	23444	253	0	5	666126
+75%-tile:	13862	23444	253	0	5	999188
+97.5%-tile:	13862	23444	254	0	7	1298944
+Maximum:	13862	25359	276	0	8	1332250
+Mean:	13861.9	23444	253.148	0	4.75286
+# of unique seqs:	1126753
+total # of seqs:	1332250
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.summary
+
+It took 233 secs to summarize 1332250 sequences.
+
+mothur > filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)
+
+Using 10 processors.
+Creating Filter... 
+
+
+Running Filter... 
+
+
+
+Length of filtered alignment: 577
+Number of columns removed: 49423
+Length of the original alignment: 50000
+Number of sequences used to construct filter: 1126753
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.filter
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta
+
+
+mothur > unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)
+1126753	457329
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta
+
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group B8:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group G:
+
+mothur > pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+
+Using 10 processors.
+
+Processing group H8:
+158490	48537	109953
+Total number of sequences before pre.cluster was 158490.
+pre.cluster removed 109953 sequences.
+
+It took 1285 secs to cluster 158490 sequences.
+178747	63032	115715
+Total number of sequences before pre.cluster was 178747.
+pre.cluster removed 115715 sequences.
+
+It took 2066 secs to cluster 178747 sequences.
+172224	66186	106038
+Total number of sequences before pre.cluster was 172224.
+pre.cluster removed 106038 sequences.
+
+It took 2252 secs to cluster 172224 sequences.
+It took 2290 secs to run pre.cluster.
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.B8.map
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.G.map
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.H8.map
+
+
+mothur > chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)
+
+Using 10 processors.
+
+uchime by Robert C. Edgar
+http://drive5.com/uchime
+This code is donated to the public domain.
+
+Checking sequences from ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta ...
+
+It took 36820 secs to check 48537 sequences from group G.
+
+It took 53217 secs to check 63032 sequences from group B8.
+
+It took 55603 secs to check 66186 sequences from group H8.
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.chimeras
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos
+
+
+mothur > remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
+[WARNING]: This command can take a namefile and you did not provide one. The current namefile is /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.names which seems to match ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta.
+Removed 70091 sequences from your fasta file.
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta
+
+
+mothur > summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table,processors=10)
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	577	239	0	3	1
+2.5%-tile:	1	577	253	0	4	31078
+25%-tile:	1	577	253	0	4	310774
+Median: 	1	577	253	0	5	621547
+75%-tile:	1	577	253	0	5	932320
+97.5%-tile:	1	577	254	0	7	1212015
+Maximum:	1	577	273	0	8	1243092
+Mean:	1	577	253.099	0	4.72778
+# of unique seqs:	96706
+total # of seqs:	1243092
+
+Output File Names: 
+/home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.summary
+
+It took 3 secs to summarize 1243092 sequences.
+
+mothur > classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
+
+Using 10 processors.
+Unable to open ./trainset/trainset14_032015.pds.fasta. Trying default /usr/local/bin/trainset14_032015.pds.fasta
+Unable to open /usr/local/bin/trainset14_032015.pds.fasta. Trying mothur's location /usr/local/bin/trainset14_032015.pds.fasta
+Unable to open /usr/local/bin/trainset14_032015.pds.fasta. Trying output directory /home/asta/testcombi/outFiles/trainset14_032015.pds.fasta
+Unable to open /home/asta/testcombi/outFiles/trainset14_032015.pds.fasta
+Unable to open ./trainset/trainset14_032015.pds.tax. Trying default /usr/local/bin/trainset14_032015.pds.tax
+Unable to open /usr/local/bin/trainset14_032015.pds.tax. Trying mothur's location /usr/local/bin/trainset14_032015.pds.tax
+Unable to open /usr/local/bin/trainset14_032015.pds.tax. Trying output directory /home/asta/testcombi/outFiles/trainset14_032015.pds.tax
+Unable to open /home/asta/testcombi/outFiles/trainset14_032015.pds.tax
+[ERROR]: did not complete classify.seqs.
+
+mothur > remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=unknown)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+You have no current taxonomy file and did not provide a constaxonomy file. The taxonomy or constaxonomy parameter is required.
+[ERROR]: did not complete remove.lineage.
+
+mothur > cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+You need to provide a taxonomy file if you are if you are using a fasta file to generate the split.
+
+Using 10 processors.
+[ERROR]: did not complete cluster.split.
+
+mothur > make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+No valid current files. You must provide a list or biom file before you can use the make.shared command.
+[ERROR]: did not complete make.shared.
+
+mothur > classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+[ERROR]: did not complete classify.otu.
+
+mothur > phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+[ERROR]: did not complete phylotype.
+
+mothur > make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+No valid current files. You must provide a list or biom file before you can use the make.shared command.
+[ERROR]: did not complete make.shared.
+
+mothur > classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+Unable to open ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying default /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying mothur's location /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /usr/local/bin/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy. Trying output directory /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+Unable to open /home/asta/testcombi/outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+[ERROR]: did not complete classify.otu.
+
+mothur > system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)
+mv: cannot stat ‘./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared’: No such file or directory
+
+
+mothur > system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)
+mv: cannot stat ‘./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy’: No such file or directory
+
+
+mothur > count.groups(shared=./outFiles/BSC16s.an.shared)
+Unable to open ./outFiles/BSC16s.an.shared. Trying default /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying mothur's location /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.shared
+Using /home/asta/testcombi/outFiles/BSC16s.contigs.good.groups as input file for the group parameter.
+[ERROR]: did not complete count.groups.
+
+mothur > sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)
+Unable to open ./outFiles/BSC16s.an.shared. Trying default /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying mothur's location /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.shared
+You must provide a fasta, list, sabund, rabund or shared file as an input file.
+[ERROR]: did not complete sub.sample.
+
+mothur > rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
+Unable to open ./outFiles/BSC16s.an.shared. Trying default /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying mothur's location /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.shared
+No valid current files. You must provide a list, sabund, rabund or shared file before you can use the collect.single command.
+
+Using 10 processors.
+[ERROR]: did not complete rarefaction.single.
+
+mothur > summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)
+Unable to open ./outFiles/BSC16s.an.shared. Trying default /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying mothur's location /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.shared
+No valid current files. You must provide a list, sabund, rabund or shared file before you can use the collect.single command.
+[ERROR]: If you want to subsample with a list, rabund or sabund file, you must provide the sample size.  You can do this by setting subsample=yourSampleSize.
+[ERROR]: did not complete summary.single.
+
+mothur > heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+Unable to open ./outFiles/BSC16s.an.0.03.subsample.shared. Trying default /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying mothur's location /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+[ERROR]: did not complete heatmap.bin.
+
+mothur > dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
+Unable to open ./outFiles/BSC16s.an.shared. Trying default /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying mothur's location /usr/local/bin/BSC16s.an.shared
+Unable to open /usr/local/bin/BSC16s.an.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.shared
+
+Using 10 processors.
+[ERROR]: did not complete dist.shared.
+
+mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete heatmap.sim.
+
+mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
+Unable to open ./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.jclass.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.jclass.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.jclass.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.jclass.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.jclass.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.jclass.0.03.lt.ave.dist
+[ERROR]: did not complete heatmap.sim.
+
+mothur > venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=birki_vidi_eyjur_H-birki_vidi_eyjur_B-vakalag)
+Unable to open ./outFiles/BSC16s.an.0.03.subsample.shared. Trying default /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying mothur's location /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+No valid current files. You must provide a list or shared file.
+[ERROR]: did not complete venn.
+
+mothur > tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+No valid current files. You must provide a shared, phylip or column file.
+
+Using 10 processors.
+[ERROR]: did not complete tree.shared.
+
+mothur > parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.tre
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.tre. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.tre
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.tre. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre
+
+Using 10 processors.
+[ERROR]: did not complete parsimony.
+
+mothur > pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete pcoa.
+
+mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete nmds.
+
+mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete nmds.
+
+mothur > amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete amova.
+
+mothur > homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.dist. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+[ERROR]: did not complete homova.
+
+mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
+Unable to open ./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes. Trying default /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes. Trying mothur's location /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+Unable to open /usr/local/bin/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+Unable to open ./outFiles/BSC16s.an.0.03.subsample.shared. Trying default /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying mothur's location /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+You did not provide a label, I will use the first label in your inputfile.
+[ERROR]: did not complete corr.axes.
+
+mothur > metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design,processors=10)
+Unable to open ./outFiles/BSC16s.an.0.03.subsample.shared. Trying default /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying mothur's location /usr/local/bin/BSC16s.an.0.03.subsample.shared
+Unable to open /usr/local/bin/BSC16s.an.0.03.subsample.shared. Trying output directory /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+Unable to open /home/asta/testcombi/outFiles/BSC16s.an.0.03.subsample.shared
+
+Using 10 processors.
+[ERROR]: did not complete metastats.
+
+mothur > quit()
+
+
+************************************************************
+************************************************************
+************************************************************
+Detected 27 [ERROR] messages, please review.
+************************************************************
+************************************************************
+************************************************************
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Detected 3 [WARNING] messages, please review.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,0 +1,2669 @@
+Linux version
+
+Using ReadLine
+
+Running 64Bit Version
+
+mothur v.1.38.1
+Last updated: 8/9/2016
+
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+University of Michigan
+pschloss@umich.edu
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+Type 'quit()' to exit program
+Batch Mode
+
+
+mothur > classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
+
+Using 10 processors.
+Reading template taxonomy...     DONE.
+Reading template probabilities...     DONE.
+It took 11 seconds get probabilities. 
+Classifying sequences from ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta ...
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_25289_9776 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_18509_18044 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_19715_7001 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_21155_23614 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_3634_18060 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_28902_15277 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_7494_5232 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_8163_16392 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_12647_9095 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_14833_6029 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_3742_20219 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2105_25073_5358 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_6528_24251 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2112_17857_12829 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_11100_23408 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1106_17430_4580 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2109_17848_8718 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_17322_9530 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1108_6642_24451 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_5535_16936 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_19349_23830 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_8359_5790 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_17071_2863 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_22462_10441 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2102_19146_26206 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24722_20398 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_2912_14141 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_12761_24470 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_28179_16163 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_5877_13877 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_19738_23662 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_16564_5284 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2104_18477_1849 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_15693_2055 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_20540_17710 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_22709_9488 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_19621_5134 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_14705_19522 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24880_13823 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_26560_17735 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_11644_16755 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_7769_10263 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_7266_25735 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2108_15416_21023 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1102_19446_11226 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_22550_26361 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_11936_4687 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_27003_17585 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_20164_15476 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_3848_19386 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_18787_22679 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_3266_14826 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_27017_20350 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_20108_9521 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+
+It took 284 secs to classify 96706 sequences.
+
+
+It took 5 secs to create the summary file for 96706 sequences.
+
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.tax.summary
+
+
+mothur > remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=unknown)
+
+[NOTE]: The count file should contain only unique names, so mothur assumes your fasta, list and taxonomy files also contain only uniques.
+
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table
+
+
+mothur > cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
+
+Using 10 processors.
+Splitting the file...
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+
+It took 15 seconds to calculate the distances for 2917 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+
+It took 45 seconds to calculate the distances for 8761 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+
+It took 189 seconds to calculate the distances for 21243 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+
+It took 1 seconds to calculate the distances for 970 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+
+It took 15 seconds to calculate the distances for 3671 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+
+It took 0 seconds to calculate the distances for 576 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+
+It took 1 seconds to calculate the distances for 576 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+
+It took 0 seconds to calculate the distances for 689 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+
+It took 12 seconds to calculate the distances for 3581 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+
+It took 3 seconds to calculate the distances for 2205 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+
+It took 2 seconds to calculate the distances for 1196 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+
+It took 9 seconds to calculate the distances for 3180 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+
+It took 1 seconds to calculate the distances for 675 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+
+It took 0 seconds to calculate the distances for 405 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+
+It took 1 seconds to calculate the distances for 688 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+
+It took 5 seconds to calculate the distances for 2409 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+
+It took 0 seconds to calculate the distances for 337 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+
+It took 2 seconds to calculate the distances for 1494 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+
+It took 5 seconds to calculate the distances for 2294 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+
+It took 0 seconds to calculate the distances for 15 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+
+It took 1 seconds to calculate the distances for 956 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+
+It took 3 seconds to calculate the distances for 1823 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+
+It took 0 seconds to calculate the distances for 68 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+
+It took 6 seconds to calculate the distances for 2885 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+
+It took 2 seconds to calculate the distances for 1339 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+
+It took 2 seconds to calculate the distances for 1131 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+
+It took 1 seconds to calculate the distances for 648 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+
+It took 17 seconds to calculate the distances for 4327 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+
+It took 25 seconds to calculate the distances for 5283 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+
+It took 3 seconds to calculate the distances for 1476 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+
+It took 7 seconds to calculate the distances for 2093 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+
+It took 1 seconds to calculate the distances for 867 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+
+It took 3 seconds to calculate the distances for 1065 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+
+It took 0 seconds to calculate the distances for 573 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+
+It took 3 seconds to calculate the distances for 1471 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+
+It took 2 seconds to calculate the distances for 1304 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+
+It took 1 seconds to calculate the distances for 842 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+
+It took 1 seconds to calculate the distances for 698 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+
+It took 0 seconds to calculate the distances for 195 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+
+It took 0 seconds to calculate the distances for 501 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+
+It took 1 seconds to calculate the distances for 367 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+
+It took 0 seconds to calculate the distances for 778 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+
+It took 0 seconds to calculate the distances for 17 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+
+It took 0 seconds to calculate the distances for 75 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+
+It took 1 seconds to calculate the distances for 308 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+
+It took 0 seconds to calculate the distances for 63 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+
+It took 0 seconds to calculate the distances for 26 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+
+It took 0 seconds to calculate the distances for 223 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+
+It took 0 seconds to calculate the distances for 95 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+
+It took 0 seconds to calculate the distances for 164 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+
+It took 0 seconds to calculate the distances for 21 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+
+It took 1 seconds to calculate the distances for 864 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+
+It took 0 seconds to calculate the distances for 96 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+
+It took 0 seconds to calculate the distances for 82 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+
+It took 0 seconds to calculate the distances for 339 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+
+It took 1 seconds to calculate the distances for 293 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+
+It took 0 seconds to calculate the distances for 18 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+
+It took 1 seconds to calculate the distances for 1200 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+
+It took 0 seconds to calculate the distances for 181 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+
+It took 1 seconds to calculate the distances for 442 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+
+It took 0 seconds to calculate the distances for 497 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+
+It took 1 seconds to calculate the distances for 355 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+
+It took 0 seconds to calculate the distances for 199 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+
+It took 0 seconds to calculate the distances for 12 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+
+It took 0 seconds to calculate the distances for 307 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+
+It took 0 seconds to calculate the distances for 253 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+
+It took 0 seconds to calculate the distances for 392 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+
+It took 0 seconds to calculate the distances for 80 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+
+It took 0 seconds to calculate the distances for 106 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+
+It took 1 seconds to calculate the distances for 118 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+
+It took 0 seconds to calculate the distances for 350 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+
+It took 0 seconds to calculate the distances for 85 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+
+It took 0 seconds to calculate the distances for 73 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+
+It took 0 seconds to calculate the distances for 104 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+
+It took 0 seconds to calculate the distances for 62 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.75.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+
+It took 0 seconds to calculate the distances for 13 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+
+It took 0 seconds to calculate the distances for 65 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+
+It took 0 seconds to calculate the distances for 8 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+
+It took 0 seconds to calculate the distances for 23 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.dist
+
+It took 0 seconds to calculate the distances for 87 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+
+It took 0 seconds to calculate the distances for 28 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+
+It took 0 seconds to calculate the distances for 12 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+
+It took 0 seconds to calculate the distances for 38 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+
+It took 0 seconds to calculate the distances for 12 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+It took 0 seconds to calculate the distances for 25 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+
+It took 0 seconds to calculate the distances for 7 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+
+It took 0 seconds to calculate the distances for 44 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.dist
+
+It took 0 seconds to calculate the distances for 15 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.dist
+
+It took 0 seconds to calculate the distances for 14 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.dist
+
+It took 1 seconds to calculate the distances for 32 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+
+It took 0 seconds to calculate the distances for 13 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.dist
+
+It took 0 seconds to calculate the distances for 11 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+
+It took 0 seconds to calculate the distances for 21 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.dist
+
+It took 0 seconds to calculate the distances for 11 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+
+It took 0 seconds to calculate the distances for 16 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.dist
+
+It took 0 seconds to calculate the distances for 6 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+
+It took 0 seconds to calculate the distances for 5 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.105.dist
+
+It took 0 seconds to calculate the distances for 4 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+
+It took 0 seconds to calculate the distances for 3 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.107.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.107.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.108.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.108.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.110.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.110.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.111.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.111.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.112.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.112.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.113.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.113.dist
+
+It took 0 seconds to calculate the distances for 5 sequences.
+/******************************************/
+Running command: dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.114.temp, processors=10, cutoff=0.15)
+
+Using 10 processors.
+/******************************************/
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.114.dist
+
+It took 0 seconds to calculate the distances for 2 sequences.
+It took 411 seconds to split the distance file.
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.110.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.107.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.108.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.111.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.114.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.85.dist
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.92.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.109.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.107.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.99.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.114.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.106.dist
+***********************************************************************
+
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.110.dist
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.108.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.111.dist
+
+
+
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.dist
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.103.dist***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.94.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.87.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+Cutoff was 0.15 changed cutoff to 0.15
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.78.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.90.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.101.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.95.dist
+Cutoff was 0.15 changed cutoff to 0.14
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.42.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.19.dist
+Cutoff was 0.15 changed cutoff to 0.13
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+RClustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.50.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.84.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.83.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.74.dist
+Cutoff was 0.15 changed cutoff to 0.15
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.113.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.100.dist
+Cutoff was 0.15 changed cutoff to 0.15
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.102.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.45.dist
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.46.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+Cutoff was 0.15 changed cutoff to 0.14
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.63.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.82.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.79.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.113.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.88.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.86.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.72.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.98.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.91.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.68.dist
+Cutoff was 0.15 changed cutoff to 0.13
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.93.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.97.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.48.dist
+Cutoff was 0.15 changed cutoff to 0.11
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.96.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.81.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.22.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Cutoff was 0.15 changed cutoff to 0.14
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.52.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.77.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.69.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.67.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Cutoff was 0.15 changed cutoff to 0.11
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+Cutoff was 0.15 changed cutoff to 0.08
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.89.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.73.dist
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.80.dist
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.53.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.58.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.49.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.47.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+Cutoff was 0.15 changed cutoff to 0.11
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.62.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.38.dist
+Cutoff was 0.15 changed cutoff to 0.12
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.54.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.55.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.40.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.16.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.70.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.64.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.44.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.59.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.61.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.13.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.37.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.3.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.7.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.39.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.33.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.60.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.5.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.6.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.9.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.26.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.14.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.12.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.20.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.31.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.17.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.51.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.32.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.36.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.10.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.57.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.34.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.29.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.35.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.24.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.18.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.21.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.15.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+Cutoff was 0.15 changed cutoff to 0.09
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.30.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.23.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.0.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.11.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.8.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.4.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.2.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.25.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+Cutoff was 0.15 changed cutoff to 0.06
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.41.dist
+Cutoff was 0.15 changed cutoff to 0.07
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.66.dist
+Cutoff was 0.15 changed cutoff to 0.06
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.65.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.71.dist
+Cutoff was 0.15 changed cutoff to 0.08
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.43.dist
+Cutoff was 0.15 changed cutoff to 0.1
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.56.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.76.dist
+Cutoff was 0.15 changed cutoff to 0.15
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.104.dist
+
+Reading ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.112.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.112.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.27.dist
+Cutoff was 0.15 changed cutoff to 0.06
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.1.dist
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+
+Clustering ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta.28.dist
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.05
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.06
+Cutoff was 0.15 changed cutoff to 0.05
+
+Cutoff was 0.15 changed cutoff to 0.05
+It took 341 seconds to cluster
+Merging the clustered files...
+It took 16 seconds to merge.
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list
+
+
+mothur > make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared
+
+
+mothur > classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
+0.03	22852
+[WARNING]: M03555_131_000000000-ANG5J_1_2104_18477_1849 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_17071_2863 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2111_19738_23662 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2109_17848_8718 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_22462_10441 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_8359_5790 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_7769_10263 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_15693_2055 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2102_19146_26206 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_21155_23614 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_3266_14826 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_3634_18060 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_28902_15277 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_19621_5134 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_14705_19522 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_11100_23408 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_12647_9095 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_27003_17585 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_20108_9521 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_19349_23830 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2113_5535_16936 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_3742_20219 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_18509_18044 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2105_25073_5358 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_22709_9488 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1108_6642_24451 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_20540_17710 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_27017_20350 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2106_7494_5232 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1113_7266_25735 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1102_19446_11226 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2108_15416_21023 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_18787_22679 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_11936_4687 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_2912_14141 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24722_20398 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_8163_16392 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_26560_17735 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_12761_24470 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_19715_7001 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1114_28179_16163 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2112_17857_12829 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2107_11644_16755 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1106_17430_4580 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_5877_13877 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2103_16564_5284 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_17322_9530 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2110_22550_26361 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2101_24880_13823 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1110_14833_6029 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1109_6528_24251 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1101_3848_19386 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_1111_25289_9776 is not in your taxonomy file.  I will not include it in the consensus.
+[WARNING]: M03555_131_000000000-ANG5J_1_2114_20164_15476 is not in your taxonomy file.  I will not include it in the consensus.
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.tax.summary
+
+
+mothur > phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)
+1
+2
+3
+4
+5
+6
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.sabund
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.rabund
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list
+
+
+mothur > make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)
+[ERROR]: M03555_131_000000000-ANG5J_1_1101_18787_22679 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1101_20108_9521 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1101_27017_20350 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1101_3266_14826 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1101_3848_19386 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1102_19446_11226 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1106_17430_4580 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1108_6642_24451 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1109_17322_9530 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1109_19715_7001 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1109_3742_20219 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1109_6528_24251 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1110_14833_6029 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1110_28902_15277 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1110_3634_18060 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1111_11936_4687 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1111_18509_18044 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1111_25289_9776 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1111_26560_17735 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1113_7266_25735 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1113_7769_10263 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1114_19621_5134 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1114_22709_9488 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_1114_28179_16163 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2101_12761_24470 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2101_24722_20398 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2101_24880_13823 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2102_19146_26206 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2103_16564_5284 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2103_22462_10441 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2103_5877_13877 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2103_8163_16392 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2104_18477_1849 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2105_25073_5358 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2106_12647_9095 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2106_7494_5232 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2107_11644_16755 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2107_21155_23614 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2107_27003_17585 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2108_15416_21023 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2109_17848_8718 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2110_14705_19522 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2110_20540_17710 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2110_22550_26361 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2110_2912_14141 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2110_8359_5790 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2111_17071_2863 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2111_19738_23662 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2112_17857_12829 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2113_15693_2055 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2113_19349_23830 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2113_5535_16936 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2114_11100_23408 is in your groupfile and not your listfile. Please correct.
+[ERROR]: M03555_131_000000000-ANG5J_1_2114_20164_15476 is in your groupfile and not your listfile. Please correct.
+Your group file contains 96706 sequences and list file contains 96652 sequences. Please correct.
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.shared
+
+
+mothur > classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)
+1	422
+
+Output File Names: 
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.1.cons.taxonomy
+./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.1.cons.tax.summary
+
+
+mothur > system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)
+
+
+mothur > system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)
+
+
+mothur > count.groups(shared=./outFiles/BSC16s.an.shared)
+B8 contains 428134.
+G contains 406296.
+H8 contains 408662.
+
+Total seqs: 1243092.
+
+Output File Names: 
+./outFiles/BSC16s.an.count.summary
+
+
+mothur > sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)
+Sampling 30597 from each group.
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.0.03.subsample.shared
+
+
+mothur > rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
+
+Using 10 processors.
+
+Processing group B8
+
+0.03
+
+Processing group G
+
+0.03
+
+Processing group H8
+
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.groups.rarefaction
+
+
+mothur > summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)
+
+Processing group B8
+
+0.03
+
+Processing group G
+
+0.03
+
+Processing group H8
+
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.groups.ave-std.summary
+./outFiles/BSC16s.an.groups.summary
+
+
+mothur > heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.0.03.subsample.0.03.heatmap.bin.svg
+
+
+mothur > dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
+
+Using 10 processors.
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.dist
+./outFiles/BSC16s.an.jclass.0.03.lt.dist
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist
+./outFiles/BSC16s.an.thetayc.0.03.lt.std.dist
+./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist
+./outFiles/BSC16s.an.jclass.0.03.lt.std.dist
+
+
+mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.heatmap.sim.svg
+
+
+mothur > heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
+
+Output File Names: 
+./outFiles/BSC16s.an.jclass.0.03.lt.ave.heatmap.sim.svg
+
+
+mothur > venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=birki_vidi_eyjur_H-birki_vidi_eyjur_B-vakalag)
+birki_vidi_eyjur_B is not a valid group, and will be disregarded.
+birki_vidi_eyjur_H is not a valid group, and will be disregarded.
+vakalag is not a valid group, and will be disregarded.
+You provided no valid groups. I will run the command using all the groups in your file.
+0.03
+
+Output File Names: 
+./outFiles/BSC16s.an.0.03.subsample.0.03.sharedsobs.B8-G-H8.svg
+./outFiles/BSC16s.an.0.03.subsample.0.03.sharedsobs.B8-G-H8.sharedotus
+
+
+mothur > tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
+
+Using 10 processors.
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+Tree complete. 
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre
+
+
+mothur > parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)
+
+Using 10 processors.
+********************#****#****#****#****#****#****#****#****#****#****#
+Comparing to random:|||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+Tree#	Groups	ParsScore	ParsSig
+1	birki_vidi_eyjur_B-birki_vidi_eyjur_H	1	1
+1	birki_vidi_eyjur_B-vakalag	1	1
+1	birki_vidi_eyjur_H-vakalag	1	1
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre.parsimony
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre.psummary
+
+
+mothur > pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+Processing...
+Rsq 1 axis: 0.998568
+Rsq 2 axis: 1
+Rsq 3 axis: 1
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.pcoa.axes
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.pcoa.loadings
+
+
+mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+Processing Dimension: 2
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Number of dimensions:	2
+Lowest stress :	3.40204e-12
+R-squared for configuration:	1
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.iters
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.stress
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+
+
+mothur > nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)
+Processing Dimension: 3
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Number of dimensions:	3
+Lowest stress :	3.50739e-12
+R-squared for configuration:	1
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.iters
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.stress
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes
+
+
+mothur > amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+birki_vidi_eyjur_B-birki_vidi_eyjur_H-vakalag	Among	Within	Total
+SS	0.319201	0	0.319201
+df	2	0	2
+MS	0.1596	-nan
+
+Fs:	-nan
+p-value: 1
+
+Experiment-wise error rate: 0.05
+If you have borderline P-values, you should try increasing the number of iterations
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.amova
+
+
+mothur > homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+HOMOVA	BValue	P-value	SSwithin/(Ni-1)_values
+birki_vidi_eyjur_B-birki_vidi_eyjur_H-vakalag	-nan	<0.001*	-nan	-nan	-nan
+birki_vidi_eyjur_B-birki_vidi_eyjur_H	-nan	<0.001*	-nan	-nan
+birki_vidi_eyjur_B-vakalag	-nan	<0.001*	-nan	-nan
+birki_vidi_eyjur_H-vakalag	-nan	<0.001*	-nan	-nan
+
+Experiment-wise error rate: 0.05
+Pair-wise error rate (Bonferroni): 0.0166667
+If you have borderline P-values, you should try increasing the number of iterations
+
+Output File Names: 
+./outFiles/BSC16s.an.thetayc.0.03.lt.ave.homova
+
+
+mothur > corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
+You did not provide a label, I will use the first label in your inputfile.
+
+Output File Names: 
+./outFiles/BSC16s.an.0.03.subsample.spearman.corr.axes
+
+
+mothur > metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design,processors=10)
+
+Using 10 processors.
+0.03
+Comparing birki_vidi_eyjur_H and birki_vidi_eyjur_B...
+
+Comparing vakalag and birki_vidi_eyjur_B...
+
+Comparing vakalag and birki_vidi_eyjur_H...
+
+
+
+
+
+
+
+
+Output File Names: 
+
+
+mothur > quit()
+
+
+************************************************************
+************************************************************
+************************************************************
+Detected 54 [ERROR] messages, please review.
+************************************************************
+************************************************************
+************************************************************
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Detected 57 [WARNING] messages, please review.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

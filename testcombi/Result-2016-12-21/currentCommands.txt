@@ -1,0 +1,202 @@
+#---------------------------------------------------------------------------------------------------
+# 10. Reducing sequencing and PCR errors
+#---------------------------------------------------------------------------------------------------
+set.dir(output=./outFiles)
+make.contigs(file=BSC16s.file,processors=10)
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta,processors=10)
+screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.fasta, group=./outFiles/BSC16s.contigs.groups, maxambig=0, maxlength=300,processors=10)
+#### OR
+#screen.seqs(fasta=./outFiles/BSC.trim.contigs.fasta, group=./outFiles/BSC.contigs.groups, summary=./outFiles/BSC.trim.contigs.summary, maxambig=0, maxlength=300,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 20. Processing improved sequences
+#---------------------------------------------------------------------------------------------------
+unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)
+count.seqs(name=./outFiles/BSC16s.trim.contigs.good.names, group=./outFiles/BSC16s.contigs.good.groups,processors=10)
+summary.seqs(count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)
+
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table,processors=10)
+screen.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.align, count=./outFiles/BSC16s.trim.contigs.good.count_table, summary=./outFiles/BSC16s.trim.contigs.good.unique.summary, start=13862, end=23444, maxhomop=8,processors=10)
+
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, count=./outFiles/BSC16s.trim.contigs.good.good.count_table,processors=10)
+
+filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)
+unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.fasta, count=./outFiles/BSC16s.trim.contigs.good.good.count_table)
+pre.cluster(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.count_table, diffs=2,processors=10)
+chimera.uchime(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t,processors=10)
+remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)
+summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table,processors=10)
+classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)
+
+# We don't want to remove those groups. Skip for now according to Saemi. Steini, Dec 15.
+# remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+
+# Let's try to only remove unknown. Steini, Dec 17.
+remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=unknown)
+
+#---------------------------------------------------------------------------------------------------
+# 30. Assessing error rates
+#     Skip this section according to Saemundur.
+#---------------------------------------------------------------------------------------------------
+#get.groups(count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, groups=Mock)
+#seq.error(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./HMP_MOCK.v35.fasta, aligned=F,processors=10)
+#dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, cutoff=0.20,processors=10)
+#cluster(column=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.dist, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table)
+#make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+#rarefaction.single(shared=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 40. Preparing for analysis
+#     Since the mock group is used here as well, we will skip it.
+#---------------------------------------------------------------------------------------------------
+#remove.groups(count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, groups=Mock)
+
+#---------------------------------------------------------------------------------------------------
+# 50. OTUs
+#---------------------------------------------------------------------------------------------------
+# Option 1
+#dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, cutoff=0.20,processors=10)
+#cluster(column=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.dist, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table)
+
+# Option 2   ( eða (í staðin fyrir þessar 2 skipanir hér að ofan, fer eftir stærð á dataset) )
+cluster.split(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=10)
+
+make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)
+
+# 21
+classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
+
+#---------------------------------------------------------------------------------------------------
+# 50.10 Phylotypes
+#---------------------------------------------------------------------------------------------------
+# 22
+phylotype(taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)
+
+# 23
+make.shared(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=1)
+
+# 24
+classify.otu(list=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)
+
+#---------------------------------------------------------------------------------------------------
+# 50.20 Phylogenetic
+#   Can skip according to Saemundur.
+#---------------------------------------------------------------------------------------------------
+# 25
+#dist.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, output=lt, processors=10,processors=10)
+
+# 26
+#clearcut(phylip=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.dist)
+
+#---------------------------------------------------------------------------------------------------
+# 60. Analysis
+#---------------------------------------------------------------------------------------------------
+# 27
+system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.shared ./outFiles/BSC16s.an.shared)
+system(mv ./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.an.unique_list.0.03.cons.taxonomy ./outFiles/BSC16s.an.cons.taxonomy)
+
+# 28
+count.groups(shared=./outFiles/BSC16s.an.shared)
+
+# 29
+sub.sample(shared=./outFiles/BSC16s.an.shared, size=30597)
+
+#---------------------------------------------------------------------------------------------------
+# 70. OTU-based analysis
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------
+# 70.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+# 30
+rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)
+
+# 31
+summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)
+
+#---------------------------------------------------------------------------------------------------
+# 70.20 Beta diversity measurements
+#---------------------------------------------------------------------------------------------------
+# 32
+heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)
+
+# 33
+dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)
+
+# 34
+heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 35
+heatmap.sim(phylip=./outFiles/BSC16s.an.jclass.0.03.lt.ave.dist)
+
+# 36
+#venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=B8_01-B8_02)
+venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=birki_vidi_eyjur_H-birki_vidi_eyjur_B-vakalag)
+
+# 37
+tree.shared(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist,processors=10)
+
+# 38
+parsimony(tree=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.tre, group=skan.sample.design,  groups=all,processors=10)
+
+# 39
+pcoa(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 40
+nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)
+
+# 41
+nmds(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, mindim=3, maxdim=3)
+
+# 42
+amova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+
+# 43
+homova(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist, design=skan.sample.design)
+
+# 44
+corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, shared=./outFiles/BSC16s.an.0.03.subsample.shared, method=spearman, numaxes=3)
+
+# 45
+# Skip according to Saemi (for the time being). Steini, Dec 15
+#corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)
+
+# 46
+# It will take very long time to complete if it will complete at all. Skip according to Saemi. Steini, Dec 15.
+# get.communitytype(shared=./outFiles/BSC16s.an.0.03.subsample.shared,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 70.30 Population-level analysis
+#---------------------------------------------------------------------------------------------------
+# 47
+metastats(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design,processors=10)
+
+# 48
+# Obsolete command. Skip.
+# classify.rf(shared=./outFiles/BSC16s.an.0.03.subsample.shared, design=skan.sample.design)
+
+#---------------------------------------------------------------------------------------------------
+# 80. Phylogeny-based analysis
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------
+# 80.10 Alpha diversity
+#---------------------------------------------------------------------------------------------------
+# 49
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
+#phylo.diversity(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, rarefy=T,processors=10)
+
+#---------------------------------------------------------------------------------------------------
+# 80.20 Beta diversity
+#    Here we need more info on how to make the tree and mouse.time.design
+#---------------------------------------------------------------------------------------------------
+
+# 50
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
+#unifrac.unweighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+
+# 51
+# .tre file missing. Skip for now according to Saemi. Steini, Dec 15.
+#unifrac.weighted(tree=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.phylip.tre, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, distance=lt, processors=2, random=F, subsample=2241,processors=10)
+

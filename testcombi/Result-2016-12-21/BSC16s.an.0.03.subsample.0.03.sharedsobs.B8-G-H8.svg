@@ -1,0 +1,23 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1500 1600 " >
+<g>
+<rect fill="white" stroke="white" x="0" y="0" width="1500" height="1600"/><text fill="black" class="seri"  font-size="24" x="600" y="80">Venn Diagram at distance 0.03</text>
+<circle fill="rgb(255,0,0)" opacity=".3" stroke="black" cx="495" cy="400" r="330"/><circle fill="rgb(0,255,0)" opacity=".3" stroke="black" cx="975" cy="400" r="330"/><circle fill="rgb(0,0,255)" opacity=".3" stroke="black" cx="750" cy="800" r="330"/><text fill="black" class="seri"  font-size="24" x="432" y="352">1240</text>
+<text fill="black" class="seri"  font-size="24" x="433" y="304">B8</text>
+<text fill="black" class="seri"  font-size="24" x="749"  y="352">371</text>
+<text fill="black" class="seri"  font-size="24" x="1018"  y="352">1617</text>
+<text fill="black" class="seri"  font-size="24" x="1020"  y="304">G</text>
+<text fill="black" class="seri"  font-size="24" x="569"  y="608">524</text>
+<text fill="black" class="seri"  font-size="24"  x="748"   y="864">1151</text>
+<text fill="black" class="seri"  font-size="24"  x="749"   y="816">H8</text>
+<text fill="black" class="seri"  font-size="24" x="884" y="608">342</text>
+<text fill="black" class="seri"  font-size="24" x="748"  y="560">1341</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1320">The number of species shared between groups B8 and G is 1712</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1360">The number of species shared between groups B8 and H8 is 1865</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1400">The number of species shared between groups G and H8 is 1683</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1160">The number of species in group B8 is 3476</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1200">The number of species in group G is 3671</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1240">The number of species in group H8 is 3358</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1280">The total richness of all the groups is 6586</text>
+<text fill="black" class="seri"  font-size="24" x="375" y="1440">The total shared richness is 1341</text>
+</g>
+</svg>
