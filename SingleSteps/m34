@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-heatmap.sim(phylip=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.dist)

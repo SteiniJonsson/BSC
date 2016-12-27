@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-filter.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, vertical=T, trump=.,processors=10)

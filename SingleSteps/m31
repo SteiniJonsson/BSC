@@ -1,3 +1,0 @@
-set.dir(output=./outFiles)
-summary.single(shared=./outFiles/BSC16s.an.shared, calc=nseqs-coverage-sobs-invsimpson, subsample=T)
-

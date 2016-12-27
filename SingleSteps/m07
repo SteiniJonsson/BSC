@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-align.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.fasta, reference=silva.v5.fasta,processors=10)

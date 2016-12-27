@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-remove.lineage(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)

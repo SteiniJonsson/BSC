@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-dist.shared(shared=./outFiles/BSC16s.an.shared, calc=thetayc-jclass, subsample=2241,processors=10)

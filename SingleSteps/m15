@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-remove.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)

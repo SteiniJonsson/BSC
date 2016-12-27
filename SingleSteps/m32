@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-heatmap.bin(shared=./outFiles/BSC16s.an.0.03.subsample.shared, scale=log2, numotu=50)

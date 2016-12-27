@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-summary.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.align, count=./outFiles/BSC16s.trim.contigs.good.good.count_table,processors=10)

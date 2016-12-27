@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-classify.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=./outFiles/BSC16s.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, reference=./trainset/trainset14_032015.pds.fasta, taxonomy=./trainset/trainset14_032015.pds.tax, cutoff=80,processors=10)

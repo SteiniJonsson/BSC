@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-corr.axes(axes=./outFiles/BSC16s.an.thetayc.0.03.lt.ave.nmds.axes, metadata=mouse.dpw.metadata, method=spearman, numaxes=3)

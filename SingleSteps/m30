@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-rarefaction.single(shared=./outFiles/BSC16s.an.shared, calc=sobs, freq=100,processors=10)

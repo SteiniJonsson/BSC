@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-venn(shared=./outFiles/BSC16s.an.0.03.subsample.shared, groups=B8_01-B8_02)

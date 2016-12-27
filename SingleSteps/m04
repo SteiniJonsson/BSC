@@ -1,2 +1,0 @@
-set.dir(output=./outFiles)
-unique.seqs(fasta=./outFiles/BSC16s.trim.contigs.good.fasta)
